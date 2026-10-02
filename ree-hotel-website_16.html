@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>An Urban Sanctuary in Bangkok</title>
+<link rel="icon" type="image/png" href="https://ree-riverside.com/images/logo.png">
+<link rel="apple-touch-icon" href="https://ree-riverside.com/images/logo.png">
+<meta property="og:title" content="An Urban Sanctuary in Bangkok">
+<meta property="og:site_name" content="Ree Hotel">
+<meta property="og:image" content="https://ree-riverside.com/images/logo.png">
+<meta name="description" content="A calm space within the city. Simple, comfortable stays with gentle wellness experiences in the heart of Thonburi, Bangkok.">
+<meta name="theme-color" content="#24324a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+  // Each title is its own page. Pages change only from the menu and links, never by scrolling past the end.
+  document.documentElement.classList.add('fp');
+</script>
+<style>
+/* ================= Tokens ================= */
+:root,[data-theme="river"]{
+  /* River Indigo (default): Chao Phraya at dusk, temple gold */
+  --pearl:#f5f6f7;      /* page background */
+  --sage-mist:#e4e9ef;  /* alternate sections */
+  --sage:#9aaabd;       /* soft accent */
+  --moss:#3e4c60;       /* secondary text on light */
+  --forest:#24324a;     /* main deep colour */
+  --night:#18223a;      /* footer / darkest */
+  --deep-rgb:36,50,74; --night-rgb:20,28,46;
+  --on-deep:#e4e9f0; --on-deep-soft:#b9c4d4;
+  --champagne:#c9aa72;  /* gold accent on dark */
+  --gold-ink:#7a5c2a;   /* gold for text on light */
+  --ink:#1b2230;
+  --line:rgba(36,50,74,.14);
+}
+[data-theme="teak"]{
+  /* Teak and Sand: warm wood, linen, brass */
+  --pearl:#f7f4ef; --sage-mist:#ece5da; --sage:#b9a68c; --moss:#5a4a3c;
+  --forest:#3d2f27; --night:#2a201b; --deep-rgb:61,47,39; --night-rgb:42,32,27;
+  --on-deep:#f0e8de; --on-deep-soft:#cdbfae; --champagne:#cfae74; --gold-ink:#7a5426;
+  --ink:#251c17; --line:rgba(61,47,39,.15);
+}
+[data-theme="lotus"]{
+  /* Lotus: dusty plum, blush, soft gold */
+  --pearl:#f8f5f5; --sage-mist:#efe6e7; --sage:#c4a7ad; --moss:#5c4650;
+  --forest:#4a2f3c; --night:#331f29; --deep-rgb:74,47,60; --night-rgb:51,31,41;
+  --on-deep:#f3e9ec; --on-deep-soft:#d6c1c8; --champagne:#d2b07a; --gold-ink:#7d5729;
+  --ink:#2a1c23; --line:rgba(74,47,60,.14);
+}
+[data-theme="teal"]{
+  /* Teal and Sand: calm and healthy teal, warm sand, brushed brass to match the gold logo */
+  --pearl:#f6f2eb; --sage-mist:#e9e3d8; --sage:#9fb3ad; --moss:#4a4740;
+  --forest:#1f4a4c; --night:#143436; --deep-rgb:31,74,76; --night-rgb:20,52,54;
+  --on-deep:#ecf1ee; --on-deep-soft:#bccfca; --champagne:#c9a466; --gold-ink:#7d5c27;
+  --ink:#2a2724; --line:rgba(31,74,76,.15);
+}
+[data-theme="forest"]{
+  /* Original Ree green */
+  --pearl:#f6f5ef; --sage-mist:#e6eae1; --sage:#9fb09a; --moss:#3d5143;
+  --forest:#24392c; --night:#1d2f24; --deep-rgb:36,57,44; --night-rgb:20,32,25;
+  --on-deep:#e3e9e0; --on-deep-soft:#c4d0c0; --champagne:#c6a876; --gold-ink:#7a5c2a;
+  --ink:#1b241e; --line:rgba(36,57,44,.14);
+}
+:root{
+  --display:"Gilda Display","Times New Roman",serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --lux:cubic-bezier(.22,.61,.36,1);
+  --slow:1.3s;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font-family:var(--body);font-weight:400;font-size:17px;line-height:1.7;color:var(--ink);background:var(--pearl);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:1.5px solid var(--champagne);outline-offset:4px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;margin:0;letter-spacing:.005em}
+h1{font-size:clamp(2.6rem,6vw,5.4rem)}
+h2{font-size:clamp(2.1rem,4vw,3.4rem)}
+h3{font-size:1.45rem}
+p{margin:0 0 1.1rem;max-width:60ch}
+.wrap{width:min(1240px,100% - clamp(2.5rem,8vw,7rem));margin-inline:auto}
+section{padding:clamp(5rem,11vw,9rem) 0;position:relative}
+.alt{background:var(--sage-mist)}
+.deep{background:var(--forest);color:var(--pearl)}
+.deep p{color:var(--on-deep)}
+.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:2rem 4rem;align-items:end;margin-bottom:clamp(2.5rem,5vw,4rem)}
+.intro p{margin:0;color:var(--moss)}
+.deep .intro p{color:var(--on-deep)}
+.kicker{font-family:var(--display);font-size:1.12rem;color:var(--gold-ink);margin:0 0 1rem;display:flex;align-items:center;gap:.9rem}
+.kicker::before{content:"";width:36px;height:1px;background:currentColor}
+.deep .kicker,.hero .kicker,.td-side .kicker{color:var(--champagne)}
+
+/* ================= Buttons (hover sweep) ================= */
+.btn{position:relative;overflow:hidden;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-weight:500;font-size:.95rem;letter-spacing:.02em;text-decoration:none;padding:.95rem 1.7rem;border-radius:999px;border:1px solid var(--forest);color:var(--forest);background:transparent;cursor:pointer;transition:color .6s var(--lux),border-color .6s var(--lux),transform .6s var(--lux)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--forest);transform:scaleX(0);transform-origin:right;transition:transform .7s var(--lux)}
+.btn:hover{color:var(--pearl)}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+.btn.gold{background:var(--champagne);border-color:var(--champagne);color:var(--forest)}
+.btn.gold::before{background:var(--forest)}
+.btn.gold:hover{color:var(--champagne)}
+.btn.on-dark{border-color:rgba(246,245,239,.55);color:var(--pearl)}
+.btn.on-dark::before{background:var(--pearl)}
+.btn.on-dark:hover{color:var(--forest)}
+.btn svg{width:16px;height:16px;transition:transform .6s var(--lux)}
+.btn:hover svg{transform:translateX(4px)}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem}
+
+/* ================= Header ================= */
+.bar{position:fixed;top:0;left:0;right:0;z-index:60;padding-top:env(safe-area-inset-top,0px);transition:background .8s var(--lux),box-shadow .8s var(--lux),color .8s var(--lux);color:var(--pearl)}
+.bar-in{height:76px;display:flex;align-items:center;gap:2rem}
+.bar.solid{background:rgba(246,245,239,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);color:var(--forest);box-shadow:0 1px 0 var(--line)}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;font-family:var(--display);font-size:1.45rem;flex-shrink:0}
+.brand img{height:48px;width:auto;transition:filter .8s}
+.bar.solid .brand img{filter:brightness(.82) saturate(1.15) drop-shadow(0 0 .4px rgba(0,0,0,.35))}
+.brand .word{display:none}
+.brand.no-logo .word{display:inline}
+.nav{display:flex;gap:clamp(.9rem,1.3vw,1.5rem);margin-left:auto}
+.nav a{position:relative;text-decoration:none;font-size:.9rem;letter-spacing:.02em;padding:.3rem 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--champagne);transform:scaleX(0);transform-origin:right;transition:transform .6s var(--lux)}
+.nav a:hover::after,.nav a.on::after{transform:scaleX(1);transform-origin:left}
+.bar .btn{padding:.65rem 1.3rem;border-color:currentColor;color:inherit}
+.bar .btn::before{background:var(--champagne)}
+.bar .btn:hover{color:var(--forest);border-color:var(--champagne)}
+.menu-toggle{display:none;margin-left:auto;width:44px;height:44px;border-radius:50%;border:1px solid currentColor;background:none;cursor:pointer;place-items:center}
+.menu-toggle svg{width:20px;height:20px}
+.drawer{position:fixed;inset:0;z-index:55;background:var(--forest);color:var(--pearl);padding:calc(96px + env(safe-area-inset-top,0px)) 2rem 2rem;display:flex;flex-direction:column;gap:.2rem;clip-path:circle(0% at calc(100% - 44px) 38px);transition:clip-path .9s var(--lux);pointer-events:none}
+.drawer.open{clip-path:circle(150% at calc(100% - 44px) 38px);pointer-events:auto}
+.drawer a{font-family:var(--display);font-size:2rem;text-decoration:none;padding:.35rem 0;border-bottom:1px solid rgba(246,245,239,.12)}
+body.menu-open .bar{color:var(--pearl);background:transparent;box-shadow:none}
+
+/* ================= Hero ================= */
+.hero{height:100vh;height:100svh;min-height:640px;padding:0;overflow:hidden;color:var(--pearl);display:flex;align-items:flex-end}
+.hero .hero-media{position:absolute;inset:0;overflow:hidden;background:var(--forest)}
+.hero{position:relative;background:var(--night)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.8s var(--lux)}
+.slide.on{opacity:1;z-index:1}
+.slide img{color:transparent;width:100%;height:100%;object-fit:cover;transform:scale(1.14);transition:transform 8s cubic-bezier(.25,.1,.25,1)}
+.slide.on img{transform:scale(1.02)}
+.hero-media::after{z-index:2}
+.tagline{font-family:var(--display);font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.25;color:var(--champagne);margin:1.2rem 0 0;min-height:2.6em;max-width:28ch}
+.tagline span{display:inline-block;transition:opacity .7s var(--lux),transform .9s var(--lux)}
+.tagline span.out{opacity:0;transform:translateY(14px)}
+.slide-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,210px));gap:1.4rem;margin-top:2.8rem}
+.slide-tabs button{background:none;border:0;padding:0 0 .2rem;text-align:left;cursor:pointer;color:rgba(255,255,255,.62);font-size:.76rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:color .6s var(--lux)}
+.slide-tabs button:hover,.slide-tabs button[aria-selected="true"]{color:#fff}
+.slide-tabs i{display:block;height:2px;margin-top:.7rem;background:rgba(255,255,255,.22);overflow:hidden;border-radius:2px}
+.slide-tabs i::after{content:"";display:block;height:100%;background:var(--champagne);transform:scaleX(0);transform-origin:left}
+.slide-tabs button[aria-selected="true"] i::after{animation:fillbar var(--slide-time,6.5s) linear forwards}
+.slide-tabs.paused button[aria-selected="true"] i::after{animation:none;transform:scaleX(1)}
+@keyframes fillbar{to{transform:scaleX(1)}}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(var(--night-rgb),.55) 0%,rgba(var(--night-rgb),.35) 38%,rgba(var(--night-rgb),.88) 100%)}
+.hero .wrap{position:relative;z-index:3;padding-bottom:clamp(3.5rem,9vh,6rem)}
+.hero h1{max-width:none}
+.line{display:block;overflow:hidden;padding-bottom:.08em}
+.line>span{display:block;transform:translateY(105%);transition:transform 1.5s var(--lux)}
+.loaded .line>span{transform:none}
+.hero .sub{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:2rem;margin-top:2.2rem}
+.hero .sub p{max-width:46ch;color:var(--on-deep);margin:0;font-size:1.08rem}
+
+.fade-in{opacity:0;transform:translateY(18px);transition:opacity 1.4s var(--lux),transform 1.4s var(--lux)}
+.loaded .fade-in{opacity:1;transform:none}
+.scroll-cue{position:absolute;z-index:3;left:50%;bottom:1.4rem;width:1px;height:54px;padding:0;border:0;background:rgba(246,245,239,.3);overflow:hidden;cursor:pointer}
+.scroll-cue::before{content:"";position:absolute;inset:-10px -20px}
+.scroll-cue::after{content:"";position:absolute;left:0;top:-50%;width:1px;height:50%;background:var(--pearl);animation:cue 2.4s var(--lux) infinite}
+@keyframes cue{to{top:100%}}
+
+/* ================= Reveal motion ================= */
+[data-reveal="up"]{opacity:0;transform:translateY(46px);transition:opacity 1.4s var(--lux),transform 1.4s var(--lux);transition-delay:var(--d,0s)}
+[data-reveal="unveil"]{clip-path:inset(100% 0 0 0);transition:clip-path 1.6s var(--lux);transition-delay:var(--d,0s)}
+[data-reveal="unveil"] img{transform:scale(1.25);transition:transform 2.2s var(--lux);transition-delay:var(--d,0s)}
+.in[data-reveal="up"]{opacity:1;transform:none}
+.in[data-reveal="unveil"]{clip-path:inset(0 0 0 0)}
+.in[data-reveal="unveil"] img{transform:scale(1.05)}
+
+/* ================= Photo frames & breathing motion ================= */
+.frame{position:relative;overflow:hidden;background:linear-gradient(140deg,var(--sage),var(--forest))}
+.frame img{width:100%;height:100%;object-fit:cover}
+.breathe{animation:breathe 18s ease-in-out infinite alternate}
+@keyframes breathe{from{scale:1}to{scale:1.07}}
+.frame.missing::after{content:"Ree Hotel";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:1.3rem;color:rgba(246,245,239,.6)}
+
+/* ================= About ================= */
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.about .frame{aspect-ratio:4/5;border-radius:220px 220px 6px 6px}
+.about .mantra{font-family:var(--display);font-size:clamp(1.7rem,2.6vw,2.3rem);color:var(--forest);margin:1.6rem 0 2.2rem;line-height:1.3}
+.about .small{position:absolute;width:42%;aspect-ratio:1;right:-8%;bottom:-10%;border-radius:6px;border:8px solid var(--pearl)}
+.about-media{position:relative}
+
+/* ================= Home blocks (Marni-style information) ================= */
+.home-block{padding:clamp(5rem,10vw,8rem) 0}
+.home-block.tint{background:var(--sage-mist)}
+.head-row{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:clamp(2.2rem,4vw,3.2rem)}
+.head-row h2{max-width:18ch}
+.textlink{display:inline-flex;align-items:center;gap:.5rem;font-weight:500;text-decoration:none;color:var(--forest);border-bottom:1px solid currentColor;padding-bottom:.2rem}
+.textlink svg{width:15px;height:15px;transition:transform .7s var(--lux)}
+.textlink:hover svg{transform:translateX(6px)}
+.rp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.rp-card{background:var(--pearl);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+.rp-card:hover{border-color:var(--champagne);box-shadow:0 30px 60px -32px rgba(var(--deep-rgb),.4)}
+.rp-card .frame{aspect-ratio:16/11}
+.rp-body{padding:1.5rem 1.5rem 1.6rem;display:flex;flex-direction:column;flex:1}
+.rp-body h3{margin-bottom:.9rem}
+.checks{list-style:none;margin:0 0 1.5rem;padding:0;font-size:.94rem}
+.checks li{display:flex;gap:.65rem;align-items:flex-start;padding:.28rem 0;color:var(--moss)}
+.checks svg{width:16px;height:16px;flex-shrink:0;margin-top:.3rem;color:var(--gold-ink)}
+.rp-body .btn{margin-top:auto;width:100%}
+.chip{display:inline-block;font-size:.76rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:.35rem .85rem;border-radius:999px;background:var(--champagne);color:var(--night);margin-bottom:1.2rem}
+.hood-top{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(2rem,5vw,4.5rem);align-items:center;margin-bottom:clamp(2.5rem,5vw,3.5rem)}
+.hood-top p{color:var(--moss)}
+.addr{display:flex;gap:.6rem;align-items:flex-start;font-size:.93rem;color:var(--moss)}
+.addr svg{width:18px;height:18px;flex-shrink:0;margin-top:.25rem;color:var(--gold-ink)}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.stat{border-radius:18px;padding:1.4rem 1.4rem 1.3rem;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .9s var(--lux)}
+.stat:hover{transform:translateY(-6px) rotate(-.6deg)}
+.stat b{font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,4vw,3.4rem);line-height:1}
+.stat span{font-size:.92rem;font-weight:500}
+.s1{background:var(--champagne);color:var(--night)}
+.s2{background:var(--forest);color:var(--pearl)}
+.s3{background:var(--night);color:var(--champagne)}
+.s3 span{color:var(--on-deep)}
+.s4{background:var(--pearl);color:var(--forest);border:1px solid var(--line)}
+.lists{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.list-card{background:var(--pearl);border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.4rem}
+.list-card h3{display:flex;align-items:center;gap:.8rem;font-size:1.3rem;margin-bottom:1rem}
+.list-card h3 i{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--forest);color:var(--champagne);font-style:normal}
+.list-card h3 i svg{width:20px;height:20px}
+.row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.6rem .7rem;margin:0 -.7rem;border-radius:8px;font-size:.95rem;transition:background .6s var(--lux),transform .6s var(--lux)}
+.row:hover{background:var(--sage-mist);transform:translateX(4px)}
+.pill{flex-shrink:0;font-size:.8rem;font-weight:600;padding:.2rem .65rem;border-radius:999px;background:var(--sage-mist);color:var(--forest)}
+.row:hover .pill{background:var(--forest);color:var(--pearl)}
+@media (max-width:980px){.rp,.lists{grid-template-columns:1fr 1fr}.hood-top{grid-template-columns:1fr}}
+@media (max-width:640px){.scroll-cue{display:none}.rp,.lists{grid-template-columns:1fr}.slide-tabs{gap:.8rem}.slide-tabs button{font-size:.66rem;letter-spacing:.08em}}
+
+/* ================= Hover cards (shared) ================= */
+.card{position:relative;display:block;text-decoration:none;color:inherit;cursor:pointer;transition:transform .9s var(--lux),box-shadow .9s var(--lux)}
+.card:hover{transform:translateY(-8px)}
+.card .frame img{transition:transform 1.6s var(--lux)}
+.card:hover .frame img{transform:scale(1.08)}
+.card .more{display:inline-flex;align-items:center;gap:.5rem;font-size:.9rem;font-weight:500;color:var(--forest);margin-top:.4rem}
+.card .more svg{width:15px;height:15px;transition:transform .7s var(--lux)}
+.card:hover .more svg{transform:translateX(6px)}
+
+/* ================= Rooms ================= */
+.rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1.25rem,2.5vw,2.25rem)}
+.room .frame{aspect-ratio:3/4;border-radius:4px}
+.room .frame::before{content:"";position:absolute;inset:14px;z-index:2;border:1px solid rgba(246,245,239,.0);transition:border-color .9s var(--lux),inset .9s var(--lux);pointer-events:none}
+.room:hover .frame::before{border-color:rgba(246,245,239,.7);inset:18px}
+.room h3{margin:1.3rem 0 .4rem}
+.room p{font-size:.96rem;color:var(--moss);margin-bottom:.6rem}
+.direct{margin-top:clamp(3rem,5vw,4.5rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.5rem;padding:2rem 0 0;border-top:1px solid var(--line)}
+.direct strong{font-family:var(--display);font-weight:400;font-size:1.8rem}
+.direct span{display:block;font-size:.92rem;color:var(--moss)}
+
+/* ================= Packages ================= */
+.packages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem;align-items:stretch}
+.pkg{background:var(--pearl);border-radius:6px;padding:2.2rem 1.9rem;display:flex;flex-direction:column;border:1px solid transparent;overflow:hidden}
+.pkg::after{content:"";position:absolute;top:0;left:-90%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(198,168,118,.18),transparent);transform:skewX(-18deg);transition:left 1.3s var(--lux);pointer-events:none}
+.pkg:hover::after{left:130%}
+.pkg:hover{box-shadow:0 30px 60px -30px rgba(var(--deep-rgb),.35);border-color:rgba(198,168,118,.55)}
+.pkg.best{background:var(--forest);color:var(--pearl)}
+.pkg.best p,.pkg.best li{color:var(--on-deep)}
+.pkg.best .len{color:var(--champagne)}
+.pkg .tag{align-self:flex-start;font-size:.78rem;font-weight:500;letter-spacing:.04em;color:var(--forest);background:var(--champagne);padding:.25rem .75rem;border-radius:999px;margin-bottom:1rem}
+.pkg .len{font-family:var(--display);color:var(--gold-ink);font-size:1.05rem;margin:.35rem 0 .9rem}
+.pkg p{font-size:.95rem;color:var(--moss)}
+.pkg ul{list-style:none;margin:.4rem 0 1.6rem;padding:0;font-size:.93rem}
+.pkg li{padding:.55rem 0 .55rem 1.5rem;border-top:1px solid var(--line);position:relative;color:var(--ink)}
+.pkg.best li{border-color:rgba(246,245,239,.12)}
+.pkg li::before{content:"";position:absolute;left:0;top:1.15rem;width:9px;height:1px;background:var(--champagne)}
+.buy{margin-top:auto;display:grid;gap:.6rem}
+.buy a{display:flex;justify-content:space-between;align-items:center;text-decoration:none;font-size:.92rem;padding:.85rem 1.1rem;border-radius:4px;border:1px solid var(--line);transition:background .6s var(--lux),border-color .6s var(--lux),padding .6s var(--lux)}
+.pkg.best .buy a{border-color:rgba(246,245,239,.25)}
+.buy a:hover{background:var(--champagne);border-color:var(--champagne);color:var(--forest);padding-left:1.4rem}
+.buy b{font-family:var(--display);font-weight:400;font-size:1.2rem}
+.note{margin-top:1.6rem;font-size:.9rem;color:var(--moss)}
+
+/* ================= Healing ================= */
+.healing{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.healing .frame{aspect-ratio:5/4;border-radius:6px}
+.session{display:grid;grid-template-columns:1fr auto;gap:.2rem 1.5rem;padding:1.4rem 0;border-top:1px solid rgba(246,245,239,.15);transition:padding .7s var(--lux)}
+.session:last-of-type{border-bottom:1px solid rgba(246,245,239,.15);margin-bottom:2.2rem}
+.session:hover{padding-left:.8rem}
+.session span{font-size:.9rem;color:var(--on-deep-soft)}
+.session b{grid-row:1/3;grid-column:2;align-self:center;font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--champagne)}
+
+/* ================= Tours ================= */
+.tours{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.2rem}
+.tour{background:var(--pearl);border-radius:6px;padding:2rem 1.8rem 1.7rem;border:1px solid var(--line);text-align:left;width:100%;display:flex;flex-direction:column;min-height:280px;overflow:hidden}
+.tour:hover{border-color:var(--champagne);box-shadow:0 30px 60px -32px rgba(var(--deep-rgb),.35)}
+.tour .ico{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:var(--sage-mist);color:var(--forest);margin-bottom:1.5rem;transition:background .8s var(--lux),color .8s var(--lux),transform 1s var(--lux)}
+.tour:hover .ico{background:var(--forest);color:var(--champagne);transform:rotate(-8deg) scale(1.08)}
+.tour .ico svg{width:26px;height:26px}
+.tour .len{font-size:.88rem;color:var(--moss);margin:.35rem 0 .8rem}
+.tour p{font-size:.94rem;color:var(--moss)}
+.tour .more{margin-top:auto}
+.custom{margin-top:2rem;color:var(--moss)}
+
+/* ================= Location ================= */
+.loc{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.15fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.places{display:grid;gap:.6rem}
+.place{position:relative;width:100%;text-align:left;cursor:pointer;background:var(--pearl);border:1px solid var(--line);border-radius:8px;padding:1rem 1.2rem;display:grid;grid-template-columns:auto 1fr auto;gap:0 1rem;align-items:center;transition:transform .9s var(--lux),box-shadow .9s var(--lux),border-color .9s var(--lux),background .9s var(--lux),opacity .9s var(--lux);transform-origin:left center}
+.place:hover{border-color:var(--champagne);transform:translateX(6px)}
+.places.has-active .place:not(.active){opacity:.6;transform:scale(.97)}
+.places.has-active .place:not(.active):hover{opacity:1;transform:scale(.97) translateX(6px)}
+.place.active{background:var(--forest);color:var(--pearl);border-color:var(--forest);transform:scale(1.04);box-shadow:0 34px 60px -30px rgba(var(--deep-rgb),.55);z-index:2}
+.place.flip{animation:flipOut 1s var(--lux)}
+@keyframes flipOut{0%{transform:perspective(900px) rotateX(0) scale(1)}45%{transform:perspective(900px) rotateX(-90deg) scale(1.02)}}
+.place .pi{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--sage-mist);color:var(--forest);transition:background .9s var(--lux),color .9s var(--lux)}
+.place.active .pi{background:var(--champagne);color:var(--forest)}
+.place .pi svg{width:20px;height:20px}
+.place strong{font-weight:500;display:block;line-height:1.35}
+.place small{display:block;font-size:.84rem;color:var(--moss);transition:color .9s}
+.place.active small{color:var(--on-deep-soft)}
+.place .dist{font-family:var(--display);font-size:1.05rem;color:var(--moss);text-align:right;white-space:nowrap}
+.place.active .dist{color:var(--champagne)}
+.place .extra{grid-column:1/-1;display:grid;grid-template-rows:0fr;transition:grid-template-rows .9s var(--lux)}
+.place .extra>div{overflow:hidden;min-height:0}
+.place.active .extra{grid-template-rows:1fr}
+.place .extra p{font-size:.92rem;color:var(--on-deep);margin:1rem 0 .6rem}
+.place .extra a{font-size:.88rem;font-weight:500;color:var(--champagne);text-decoration:none;border-bottom:1px solid currentColor}
+.mapbox{position:sticky;top:100px;aspect-ratio:4/4.3;border-radius:10px;overflow:hidden;background:var(--sage-mist);box-shadow:0 40px 80px -40px rgba(var(--deep-rgb),.45)}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0;transition:opacity .9s var(--lux),transform 1.2s var(--lux)}
+.mapbox iframe.leaving{opacity:0;transform:scale(1.06)}
+.mapbox iframe.entering{opacity:0;transform:scale(.96)}
+.maptag{position:absolute;left:1rem;top:1rem;z-index:2;background:var(--pearl);color:var(--forest);font-size:.88rem;font-weight:500;padding:.5rem .9rem;border-radius:999px;box-shadow:0 6px 20px rgba(var(--deep-rgb),.18)}
+.river{margin-top:2rem;padding:1.4rem 1.5rem;border-left:2px solid var(--champagne);background:var(--pearl);font-size:.94rem;color:var(--moss)}
+.river p{margin:0}
+
+/* ================= Gallery ================= */
+.tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2.2rem}
+.tabs button{padding:.55rem 1.2rem;border-radius:999px;border:1px solid var(--line);background:transparent;cursor:pointer;font-size:.9rem;transition:background .6s var(--lux),color .6s var(--lux),border-color .6s var(--lux)}
+.tabs button:hover{border-color:var(--forest)}
+.tabs button[aria-pressed="true"]{background:var(--forest);color:var(--pearl);border-color:var(--forest)}
+.masonry{columns:4 240px;column-gap:1rem}
+.shot{break-inside:avoid;margin:0 0 1rem;cursor:zoom-in;border:0;padding:0;background:none;width:100%;text-align:left;display:block;transition:opacity .8s var(--lux),transform .8s var(--lux)}
+.shot .frame{border-radius:4px}
+.shot .frame img{height:auto;aspect-ratio:var(--ar,4/5);transition:transform 1.6s var(--lux),filter 1.2s var(--lux)}
+.shot:hover .frame img{transform:scale(1.07);filter:brightness(.82)}
+.shot .frame::after{content:"View";position:absolute;inset:auto auto 1rem 1rem;color:var(--pearl);font-family:var(--display);font-size:1.15rem;opacity:0;transform:translateY(10px);transition:opacity .8s var(--lux),transform .8s var(--lux)}
+.shot:hover .frame::after{opacity:1;transform:none}
+.shot figcaption{font-size:.85rem;color:var(--moss);margin-top:.5rem}
+.shot.hide{display:none}
+
+/* ================= Contact ================= */
+.contact{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,6rem);align-items:center}
+.socials{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.qrs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.qr{background:var(--pearl);color:var(--ink);border-radius:8px;padding:1rem;text-align:center;transition:transform .9s var(--lux)}
+.qr:hover{transform:translateY(-8px) rotate(-1deg)}
+.qr img{width:100%;aspect-ratio:1;object-fit:contain}
+.qr strong{display:block;font-family:var(--display);font-weight:400;font-size:1.2rem;margin-top:.5rem}
+.qr span{font-size:.84rem;color:var(--moss)}
+
+/* ================= Dialogs (tours + gallery) ================= */
+dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;color:inherit}
+dialog::backdrop{background:rgba(var(--deep-rgb),.55);backdrop-filter:blur(6px)}
+dialog[open]{animation:pop .9s var(--lux)}
+dialog[open]::backdrop{animation:fade .9s var(--lux)}
+@keyframes pop{from{opacity:0;transform:translateY(40px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.tour-dialog{width:min(860px,94vw);max-height:90vh}
+.td{background:var(--pearl);border-radius:10px;overflow:auto;max-height:90vh;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr)}
+.td-main{padding:clamp(1.8rem,4vw,3rem)}
+.td-side{background:var(--forest);color:var(--pearl);padding:clamp(1.8rem,4vw,2.6rem)}
+.td-side h3{font-size:1.3rem;margin-bottom:.4rem}
+.td-side p{color:var(--on-deep);font-size:.92rem}
+.td .len{color:var(--moss);margin:.3rem 0 1.4rem}
+.stops{list-style:none;padding:0;margin:0 0 1.4rem}
+.stops li{padding:.8rem 0;border-top:1px solid var(--line)}
+.stops li strong{display:block;font-weight:500}
+.stops li span{font-size:.9rem;color:var(--moss)}
+.ask{display:grid;gap:.55rem;margin:1.2rem 0 1.4rem}
+.ask a{display:flex;align-items:center;gap:.8rem;text-decoration:none;padding:.8rem 1rem;border-radius:6px;border:1px solid rgba(246,245,239,.22);font-size:.94rem;transition:background .6s var(--lux),color .6s var(--lux),padding .6s var(--lux)}
+.ask a:hover{background:var(--champagne);color:var(--forest);padding-left:1.3rem}
+.ask svg{width:18px;height:18px;flex-shrink:0}
+.mini-qr{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.mini-qr div{background:var(--pearl);color:var(--ink);border-radius:6px;padding:.5rem;text-align:center;font-size:.8rem}
+.mini-qr img{width:100%;aspect-ratio:1;object-fit:contain}
+.x{position:absolute;top:1rem;right:1rem;z-index:3;width:42px;height:42px;border-radius:50%;border:0;background:var(--pearl);color:var(--forest);cursor:pointer;display:grid;place-items:center;box-shadow:0 6px 20px rgba(0,0,0,.18);transition:transform .7s var(--lux)}
+.x:hover{transform:rotate(90deg)}
+.x svg{width:18px;height:18px}
+.lightbox{width:100vw;height:100vh}
+.lb{position:fixed;inset:0;display:grid;place-items:center;padding:4rem 4.5rem}
+.lb img{max-height:80vh;width:auto;border-radius:4px;box-shadow:0 30px 80px rgba(0,0,0,.4);transition:opacity .6s var(--lux),transform .9s var(--lux)}
+.lb img.swap{opacity:0;transform:scale(.97)}
+.lb p{color:var(--pearl);font-family:var(--display);font-size:1.2rem;margin:1rem 0 0;text-align:center}
+.lb .nav-btn{position:fixed;top:50%;translate:0 -50%;width:52px;height:52px;border-radius:50%;border:1px solid rgba(246,245,239,.5);background:rgba(var(--deep-rgb),.4);color:var(--pearl);cursor:pointer;display:grid;place-items:center;transition:background .6s var(--lux)}
+.lb .nav-btn:hover{background:var(--champagne);color:var(--forest)}
+.lb .nav-btn svg{width:20px;height:20px}
+.lb .prev{left:1rem}.lb .next{right:1rem}
+
+/* ================= Wellness massage ================= */
+.massage{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(2rem,4vw,4rem);align-items:start}
+.treat-list{display:grid;gap:.7rem}
+.treat{width:100%;text-align:left;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:.2rem 1.2rem;align-items:center;padding:1.1rem 1.3rem;border-radius:14px;border:1px solid var(--line);background:var(--pearl);color:var(--ink);transition:transform .8s var(--lux),border-color .8s var(--lux),box-shadow .8s var(--lux),background .8s var(--lux)}
+.treat:hover{transform:translateX(8px);border-color:var(--champagne);box-shadow:0 24px 50px -30px rgba(var(--deep-rgb),.45)}
+.treat .ti{grid-row:1/3;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:var(--forest);color:var(--champagne);transition:transform 1s var(--lux)}
+.treat:hover .ti{transform:rotate(-12deg) scale(1.08)}
+.treat .ti svg{width:22px;height:22px}
+.treat strong{font-family:var(--display);font-weight:400;font-size:1.22rem;line-height:1.2}
+.treat small{grid-column:2;font-size:.9rem;color:var(--moss)}
+.treat .price{grid-row:1/3;grid-column:3;text-align:right;white-space:nowrap}
+.treat .price b{display:block;font-family:var(--display);font-weight:400;font-size:1.45rem;color:var(--forest)}
+.treat .price span{font-size:.8rem;color:var(--gold-ink);font-weight:500}
+.reels{position:sticky;top:0;display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.reel{position:relative;border-radius:26px;padding:8px;background:var(--forest);box-shadow:0 40px 70px -40px rgba(var(--night-rgb),.7);transition:transform 1s var(--lux)}
+.reel:hover{transform:translateY(-8px) rotate(-1deg)}
+.reel:nth-child(3){margin-top:3rem}
+.reel:nth-child(3):hover{transform:translateY(-8px) rotate(1deg)}
+.reel iframe{display:block;width:100%;aspect-ratio:9/16.5;border:0;border-radius:20px;background:var(--night)}
+.reel a{display:block;text-align:center;font-size:.82rem;color:var(--on-deep);text-decoration:none;padding:.55rem 0 .3rem}
+.reel a:hover{color:var(--champagne)}
+.trust{grid-column:1/-1;display:flex;gap:1rem;align-items:center;padding:1.1rem 1.3rem;border-radius:14px;background:var(--sage-mist)}
+.trust svg{width:34px;height:34px;color:var(--gold-ink);flex-shrink:0}
+.trust strong{font-family:var(--display);font-weight:400;font-size:1.15rem;display:block}
+.trust span{font-size:.9rem;color:var(--moss)}
+.m-cta{display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.5rem;margin-top:1.6rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.m-cta p{margin:0;color:var(--moss)}
+.m-cta a.tel{font-family:var(--display);font-size:1.3rem;color:var(--forest);text-decoration:none}
+.m-dialog{width:min(480px,94vw)}
+.int .m-price{font-family:var(--display);font-size:1.4rem;color:var(--champagne);margin:.2rem 0 1rem}
+@media (max-width:900px){.massage{grid-template-columns:1fr}.reels{position:relative}}
+
+/* ================= Animated scenes (Thai riverside, healing) ================= */
+.scene{position:relative;overflow:hidden;background:var(--night);box-shadow:0 40px 80px -40px rgba(var(--night-rgb),.6)}
+.scene svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.scene *{transform-box:fill-box}
+.scene-cap{position:absolute;left:1.2rem;bottom:1rem;margin:0;font-family:var(--display);font-size:1rem;color:#f4ead8;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.river-scene{aspect-ratio:4/5;border-radius:220px 220px 8px 8px}
+.about-photo{position:relative;margin:0;aspect-ratio:4/5;border-radius:220px 220px 8px 8px;overflow:hidden;background:var(--night);box-shadow:0 40px 80px -40px rgba(var(--night-rgb),.6)}
+.about-photo img{width:100%;height:100%;object-fit:cover;animation:aboutpan 26s ease-in-out infinite alternate}
+@keyframes aboutpan{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.14) translate(-2%,-3%)}}
+.about-photo::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(var(--night-rgb),0) 55%,rgba(var(--night-rgb),.75));pointer-events:none}
+.about-photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,transparent 40%,rgba(255,236,200,.18) 50%,transparent 60%);transform:translateX(-120%);animation:sheen 9s ease-in-out infinite;pointer-events:none}
+@keyframes sheen{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+.about-photo figcaption{position:absolute;z-index:2;left:1.3rem;right:1.3rem;bottom:2.1rem;font-family:var(--display);font-size:1.08rem;color:#f4ead8}
+.about-photo small{position:absolute;z-index:2;left:1.3rem;bottom:.8rem;font-size:.7rem;color:rgba(244,234,216,.7)}
+.fallback-scene{display:none}
+.no-photo .about-photo{display:none}
+.no-photo .fallback-scene{display:block}
+@media (prefers-reduced-motion:reduce){.about-photo img,.about-photo::after{animation:none}}
+.heal-scene{aspect-ratio:5/4;border-radius:8px}
+.scene .tw circle{animation:twinkle 3s ease-in-out infinite}
+.scene .tw circle:nth-child(2n){animation-delay:-1.4s}.scene .tw circle:nth-child(3n){animation-delay:-2.2s}
+@keyframes twinkle{50%{opacity:.2}}
+.scene .sun-glow{transform-origin:center;animation:glow 5s ease-in-out infinite alternate}
+.scene .sun-ref{animation:refl 3s ease-in-out infinite alternate;transform-origin:center}
+@keyframes refl{from{opacity:.2;transform:scaleX(.8)}to{opacity:.45;transform:scaleX(1.25)}}
+.scene .lights circle{animation:twinkle 2.4s ease-in-out infinite}
+.scene .shimmer rect{animation:shim 6s ease-in-out infinite;opacity:.5}
+.scene .shimmer rect:nth-child(2n){animation-duration:8s;animation-delay:-3s}
+.scene .shimmer rect:nth-child(3n){animation-duration:7s;animation-delay:-5s}
+@keyframes shim{0%,100%{transform:translateX(-12px);opacity:.15}50%{transform:translateX(14px);opacity:.65}}
+.scene .boat{animation:sail 30s linear infinite}
+@keyframes sail{from{transform:translate(-140px,388px)}to{transform:translate(460px,388px)}}
+.scene .boat path:first-child{animation:bob 2.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(2px)}}
+.scene .lamp{animation:twinkle 1.8s ease-in-out infinite}
+.scene .kr{animation:float1 22s linear infinite}
+.scene .k1{animation-delay:0s}.scene .k2{animation-delay:-8s;animation-duration:26s}.scene .k3{animation-delay:-15s;animation-duration:24s}
+@keyframes float1{0%{transform:translate(420px,440px)}50%{transform:translate(190px,452px)}100%{transform:translate(-40px,444px)}}
+.scene .k2{animation-name:float2}
+@keyframes float2{0%{transform:translate(420px,470px)}50%{transform:translate(210px,462px)}100%{transform:translate(-40px,474px)}}
+.scene .birds{animation:fly 26s linear infinite}
+@keyframes fly{from{transform:translate(-60px,120px)}to{transform:translate(440px,70px)}}
+.scene .bird{transform-origin:center;animation:flap .9s ease-in-out infinite}
+.scene .bird.b2{animation-duration:1.1s}
+@keyframes flap{50%{transform:scaleY(.4)}}
+.scene .wave{transform-origin:center;animation:wave 4.5s var(--lux) infinite;opacity:0}
+.scene .wave.w2{animation-delay:1.5s}.scene .wave.w3{animation-delay:3s}
+@keyframes wave{0%{transform:scale(1);opacity:.8}100%{transform:scale(2.6);opacity:0}}
+.scene .hum{stroke-dasharray:6 8;animation:steam 4s linear infinite}
+.scene .hum.h2{animation-duration:5s;animation-delay:-2s}.scene .hum.h3{animation-duration:4.6s;animation-delay:-3s}
+.scene .smoke{fill:none;stroke:rgba(255,255,255,.4);stroke-width:2;stroke-linecap:round;stroke-dasharray:8 16;animation:steam 8s linear infinite}
+.scene .smoke.s2{animation-duration:10s;animation-delay:-4s}
+.scene .ember{animation:twinkle 1.6s ease-in-out infinite}
+.scene .ripple-l{transform-origin:center;animation:wave 5s var(--lux) infinite;opacity:0}
+.scene .ripple-l.r2{animation-delay:2.5s}
+.scene .lotus{animation:bob 4s ease-in-out infinite}
+.scene .mote{animation:mote 7s linear infinite}
+.scene .m2{animation-delay:-2s;animation-duration:9s}.scene .m3{animation-delay:-4s}.scene .m4{animation-delay:-5.5s;animation-duration:8s}
+@keyframes mote{0%{transform:translateY(0);opacity:0}20%{opacity:1}100%{transform:translateY(-220px);opacity:0}}
+
+/* ================= Wellness page: one title, three subtitles ================= */
+#wellness{padding-bottom:0}
+.well-intro{margin-bottom:2rem}
+.well-intro h2{margin-bottom:1rem}
+.well-intro p{color:var(--moss)}
+.sub-block{padding:clamp(4.5rem,9vw,7rem) 0}
+#packages.sub-block{padding-top:1.5rem}
+.svc-title{display:flex;align-items:center;gap:1.4rem;margin-bottom:clamp(2.5rem,5vw,3.5rem)}
+.svc-title span{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--champagne))}
+.svc-title span:last-child{background:linear-gradient(90deg,var(--champagne),transparent)}
+.svc-title h3{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,3vw,2.5rem);color:var(--forest);white-space:nowrap}
+.deep .svc-title h3{color:var(--champagne)}
+.drawer a.sub{font-family:var(--body);font-size:1.1rem;padding-left:1.2rem;color:var(--on-deep-soft)}
+
+/* ================= Live motion spa scene (no people) ================= */
+.spa{grid-column:1/-1;position:relative;border-radius:22px;overflow:hidden;background:radial-gradient(ellipse at 50% 75%,rgba(201,170,114,.28),transparent 60%),linear-gradient(170deg,var(--forest),var(--night));aspect-ratio:4/4.6;box-shadow:0 40px 70px -40px rgba(var(--night-rgb),.7)}
+.spa svg{position:absolute;inset:0;width:100%;height:100%}
+.spa .flame{transform-origin:200px 268px;animation:flick 1.6s ease-in-out infinite alternate}
+.spa .flame2{transform-origin:200px 268px;animation:flick 1.1s ease-in-out infinite alternate-reverse}
+@keyframes flick{0%{transform:scale(1,1) skewX(0)}35%{transform:scale(.94,1.06) skewX(2deg)}70%{transform:scale(1.04,.96) skewX(-2deg)}100%{transform:scale(.97,1.08) skewX(1deg)}}
+.spa .glow{transform-origin:200px 250px;animation:glow 3.2s ease-in-out infinite alternate}
+@keyframes glow{from{opacity:.45;transform:scale(.92)}to{opacity:.85;transform:scale(1.08)}}
+.spa .steam{fill:none;stroke:rgba(255,255,255,.35);stroke-width:2;stroke-linecap:round;stroke-dasharray:6 14;animation:steam 7s linear infinite}
+.spa .steam.s2{animation-duration:9s;animation-delay:-3s;opacity:.7}
+.spa .steam.s3{animation-duration:8s;animation-delay:-5s;opacity:.5}
+@keyframes steam{from{stroke-dashoffset:200;opacity:0}15%{opacity:.9}to{stroke-dashoffset:0;opacity:0}}
+.spa .ring{fill:none;stroke:rgba(201,170,114,.55);stroke-width:1.2;transform-origin:200px 430px;animation:ring 5s var(--lux) infinite}
+.spa .ring.r2{animation-delay:1.7s}.spa .ring.r3{animation-delay:3.4s}
+@keyframes ring{0%{transform:scale(.3);opacity:0}20%{opacity:1}100%{transform:scale(1.6);opacity:0}}
+.spa .petal{animation:drift 14s ease-in-out infinite}
+.spa .petal.p2{animation-duration:18s;animation-delay:-6s}
+.spa .petal.p3{animation-duration:16s;animation-delay:-10s}
+@keyframes drift{0%{transform:translate(0,0) rotate(0)}50%{transform:translate(18px,-26px) rotate(40deg)}100%{transform:translate(0,0) rotate(0)}}
+.spa .cap{position:absolute;left:0;right:0;top:1.6rem;text-align:center;color:var(--on-deep);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase}
+.spa .cap b{display:block;font-family:var(--display);font-weight:400;font-size:1.6rem;letter-spacing:0;text-transform:none;color:var(--champagne);margin-bottom:.2rem}
+
+/* ================= Five-star reviews marquee ================= */
+.reviews-block{overflow:hidden}
+.ratings{display:flex;flex-wrap:wrap;gap:.8rem;margin:0 0 2.4rem}
+.rating{display:flex;align-items:center;gap:.8rem;padding:.7rem 1.1rem;border-radius:999px;background:var(--pearl);border:1px solid var(--line)}
+.rating b{font-family:var(--display);font-weight:400;font-size:1.5rem;color:var(--forest)}
+.rating span{font-size:.86rem;line-height:1.3;color:var(--moss)}
+.rating span strong{display:block;color:var(--ink);font-weight:600}
+.marquee{--gap:1.2rem;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);padding:1rem 0}
+.marquee+.marquee{margin-top:.4rem}
+.m-track{display:flex;gap:var(--gap);width:max-content;animation:marq var(--dur,42s) linear infinite}
+.marquee.rev .m-track{animation-direction:reverse}
+.marquee:hover .m-track{animation-play-state:paused}
+@keyframes marq{to{transform:translateX(calc(-50% - var(--gap) / 2))}}
+.review{width:min(380px,78vw);flex-shrink:0;background:var(--pearl);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.5rem 1.3rem;display:flex;flex-direction:column;gap:1rem;transition:transform .8s var(--lux),border-color .8s var(--lux),box-shadow .8s var(--lux)}
+.review:hover{transform:translateY(-6px);border-color:var(--champagne);box-shadow:0 26px 50px -30px rgba(var(--deep-rgb),.45)}
+.stars{display:flex;gap:3px;color:var(--champagne)}
+.stars svg{width:17px;height:17px}
+.review q{font-family:var(--display);font-size:1.3rem;line-height:1.35;color:var(--ink);quotes:"\201C" "\201D"}
+.review footer{display:flex;justify-content:space-between;gap:1rem;font-size:.86rem;color:var(--moss);margin-top:auto;padding-top:.8rem;border-top:1px solid var(--line)}
+.review footer em{font-style:normal;font-weight:600;color:var(--gold-ink)}
+
+/* ================= Sister hotel (pre-opening) ================= */
+[hidden]{display:none!important}
+.sis-off .sis{display:none!important}
+.hotels{position:relative}
+.hotels-btn{display:inline-flex;align-items:center;gap:.4rem;background:none;border:0;cursor:pointer;font-size:.92rem;letter-spacing:.02em;color:inherit;padding:.3rem 0}
+.hotels-btn svg{width:14px;height:14px;transition:transform .5s var(--lux)}
+.hotels.open .hotels-btn svg{transform:rotate(180deg)}
+.hotels-menu{position:absolute;top:calc(100% + 14px);right:-1rem;width:300px;background:var(--pearl);color:var(--ink);border-radius:14px;padding:.5rem;box-shadow:0 30px 60px -20px rgba(var(--night-rgb),.45);opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .5s var(--lux),transform .5s var(--lux)}
+.hotels.open .hotels-menu{opacity:1;transform:none;pointer-events:auto}
+.hotels-menu a{display:grid;grid-template-columns:1fr auto;gap:.1rem 1rem;align-items:center;text-decoration:none;padding:.8rem .9rem;border-radius:10px;transition:background .5s var(--lux)}
+.hotels-menu a:hover{background:var(--sage-mist)}
+.hotels-menu strong{font-family:var(--display);font-weight:400;font-size:1.1rem}
+.hotels-menu small{grid-column:1;font-size:.82rem;color:var(--moss)}
+.hotels-menu em{grid-row:1/3;grid-column:2;font-style:normal;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:.25rem .6rem;border-radius:999px;background:var(--sage-mist);color:var(--forest)}
+.hotels-menu em.soon{background:var(--champagne);color:var(--night)}
+.sister-block{background:var(--night);color:var(--pearl);overflow:hidden}
+.sister{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(2.5rem,6vw,5rem);align-items:center}
+.sister p{color:var(--on-deep)}
+.sister .chip{display:inline-flex;align-items:center;gap:.5rem}
+.sister .chip i{width:7px;height:7px;border-radius:50%;background:var(--night);animation:blink 1.6s ease-in-out infinite}
+@keyframes blink{50%{opacity:.25}}
+.sister h2{color:var(--pearl)}
+.sister .open-on{font-family:var(--display);font-size:1.25rem;color:var(--champagne);margin:1rem 0 1.4rem}
+.countdown{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem;max-width:440px;margin:0 0 2rem}
+.countdown div{border:1px solid rgba(255,255,255,.16);border-radius:12px;padding:.9rem .5rem .7rem;text-align:center}
+.countdown b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(1.8rem,3vw,2.5rem);line-height:1;color:var(--pearl)}
+.countdown span{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--on-deep-soft)}
+.offer{display:flex;gap:.9rem;align-items:flex-start;padding:1rem 1.2rem;border-radius:12px;background:rgba(201,170,114,.12);border:1px solid rgba(201,170,114,.4);margin:0 0 2rem;max-width:52ch}
+.offer svg{width:22px;height:22px;flex-shrink:0;color:var(--champagne);margin-top:.15rem}
+.offer p{margin:0;color:var(--on-deep)}
+.offer strong{color:var(--champagne);font-weight:600}
+.sis-visual{position:relative;aspect-ratio:1;border-radius:50%;max-width:520px;margin-inline:auto;width:100%}
+.sis-visual .frame{position:absolute;inset:12%;border-radius:50%;z-index:2}
+.sis-visual .frame img{animation:breathe 16s ease-in-out infinite alternate}
+.ripple{position:absolute;inset:0;border-radius:50%;border:1px solid rgba(201,170,114,.45);animation:ripple 6s var(--lux) infinite}
+.ripple:nth-child(2){animation-delay:2s}.ripple:nth-child(3){animation-delay:4s}
+@keyframes ripple{0%{transform:scale(.72);opacity:0}25%{opacity:1}100%{transform:scale(1.08);opacity:0}}
+.mono{position:absolute;inset:12%;z-index:1;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle at 35% 30%,rgba(201,170,114,.25),transparent 60%),var(--forest);border:1px solid rgba(201,170,114,.5)}
+.mono strong{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.4rem,5vw,4rem);color:var(--champagne);line-height:1}
+.mono span{display:block;margin-top:.6rem;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--on-deep-soft)}
+.sis-banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem 2rem;padding:1.1rem 1.4rem;margin-bottom:clamp(2rem,4vw,3rem);border-radius:14px;background:var(--night);color:var(--on-deep);text-decoration:none;transition:transform .8s var(--lux),box-shadow .8s var(--lux)}
+.sis-banner:hover{transform:translateY(-4px);box-shadow:0 26px 50px -28px rgba(var(--night-rgb),.7)}
+.sis-banner b{color:var(--champagne);font-family:var(--display);font-weight:400;font-size:1.15rem;margin-right:.5rem}
+.sis-banner .go{display:inline-flex;align-items:center;gap:.5rem;font-weight:500;color:var(--pearl)}
+.sis-banner .go svg{width:15px;height:15px;transition:transform .7s var(--lux)}
+.sis-banner:hover .go svg{transform:translateX(6px)}
+.int-dialog{width:min(460px,94vw)}
+.int{position:relative;background:var(--forest);color:var(--pearl);border-radius:12px;padding:2.2rem 1.8rem 1.8rem}
+.int h3{font-size:1.6rem;margin-bottom:.4rem}
+.int p{color:var(--on-deep);font-size:.94rem}
+@media (max-width:1080px){.hotels{display:none}}
+@media (max-width:820px){.sister{grid-template-columns:1fr}.sis-visual{max-width:320px;order:-1}}
+
+/* ================= Privacy policy popup ================= */
+.linklike{background:none;border:0;padding:0;font:inherit;color:var(--on-deep);cursor:pointer;border-bottom:1px solid transparent;transition:color .5s var(--lux),border-color .5s var(--lux)}
+.linklike:hover{color:var(--champagne);border-color:currentColor}
+.privacy-dialog{width:min(820px,94vw)}
+.pv{position:relative;background:var(--pearl);color:var(--ink);border-radius:12px;max-height:88vh;overflow:auto;overscroll-behavior:contain}
+.pv-head{position:sticky;top:0;z-index:2;background:var(--forest);color:var(--pearl);padding:1.8rem clamp(1.5rem,4vw,2.8rem) 1.5rem}
+.pv-head .kicker{margin-bottom:.5rem;color:var(--champagne)}
+.pv-head h2{font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.pv-head small{display:block;margin-top:.5rem;color:var(--on-deep-soft);font-size:.88rem}
+.pv-head .x{top:1.3rem;right:1.3rem}
+.pv-body{padding:clamp(1.5rem,4vw,2.8rem)}
+.pv-body p,.pv-body li{color:var(--moss);font-size:.98rem;max-width:68ch}
+.pv-body h3{font-size:1.3rem;color:var(--forest);margin:2rem 0 .7rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.pv-body h3:first-of-type{margin-top:1.4rem}
+.pv-body ul{margin:0 0 1rem;padding-left:1.2rem}
+.pv-body li{padding:.2rem 0}
+.pv-body li::marker{color:var(--gold-ink)}
+.pv-body strong{color:var(--ink);font-weight:600}
+.pv-body a{color:var(--forest);font-weight:500}
+
+/* ================= Cursor (mouse only) ================= */
+.cursor{position:fixed;left:0;top:0;z-index:100;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1px solid var(--champagne);pointer-events:none;transition:width .5s var(--lux),height .5s var(--lux),margin .5s var(--lux),background .5s var(--lux),opacity .4s;opacity:0}
+.cursor.show{opacity:1}
+.cursor.big{width:72px;height:72px;margin:-36px 0 0 -36px;background:rgba(198,168,118,.14)}
+@media (hover:none),(pointer:coarse){.cursor{display:none}}
+
+/* ================= One title = one page ================= */
+#contact{padding-bottom:0;display:flex;flex-direction:column}
+
+/* Desktop & tablet: full-screen pages with motion between them */
+.fp,.fp body{height:100%;overflow:hidden}
+.fp main{position:fixed;inset:0;background:var(--night)}
+.fp main>section{position:absolute;inset:0;margin:0;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding:calc(100px + env(safe-area-inset-top,0px)) 0 3.5rem;display:flex;flex-direction:column;visibility:hidden;will-change:transform,clip-path}
+.fp main>section.cur,.fp main>section.moving{visibility:visible}
+.fp main>section{background:var(--pearl);padding-bottom:0}
+.fp main>section.alt{background:var(--sage-mist)}
+.fp main>section.deep,.fp main>section.hero{background:var(--forest)}
+.fp .pkg{padding:1.8rem 1.6rem}
+.fp .pkg li{padding:.42rem 0 .42rem 1.5rem}
+.fp .pkg li::before{top:1rem}
+.fp main>section>.wrap{margin-block:auto}
+.fp main>#home{padding-top:0;display:block}
+.fp #contact{padding-bottom:0}
+
+.fp .intro{margin-bottom:clamp(1.8rem,3.5vh,3rem)}
+.fp .mapbox{top:0}
+.fp .scroll-cue{cursor:pointer}
+
+/* ================= Footer (end of every page) ================= */
+.site-foot{background:var(--night);color:var(--on-deep-soft);font-size:.95rem;margin-top:clamp(3.5rem,7vh,5.5rem);flex-shrink:0}
+main>section:not(.fp-only) > .site-foot{margin-bottom:0}
+.sf-top{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr)) minmax(0,1.4fr);gap:2.5rem;padding:clamp(3rem,6vw,4.5rem) 0 3rem}
+.sf-logo{display:inline-block;margin-bottom:1rem;text-decoration:none}
+.sf-logo img{height:64px;width:auto}
+.sf-logo strong{display:none}
+.sf-logo.no-logo strong{display:block}
+.sf-brand strong{display:block;font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--pearl);margin-bottom:.9rem}
+.sf-brand strong span{color:var(--champagne)}
+.sf-brand p{color:var(--on-deep-soft);max-width:34ch;margin-bottom:1.4rem}
+.sf-social{display:flex;gap:.6rem}
+.sf-social a{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(255,255,255,.18);color:var(--on-deep);transition:background .6s var(--lux),color .6s var(--lux),border-color .6s var(--lux),transform .6s var(--lux)}
+.sf-social a:hover{background:var(--champagne);border-color:var(--champagne);color:var(--night);transform:translateY(-4px)}
+.sf-social svg{width:17px;height:17px}
+.site-foot h4{margin:0 0 1.2rem;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.sf-col a{display:block;width:max-content;text-decoration:none;color:var(--on-deep);padding:.32rem 0;transition:color .5s var(--lux),transform .5s var(--lux)}
+.sf-col a:hover{color:var(--champagne);transform:translateX(5px)}
+.sf-contact li{display:grid;grid-template-columns:22px 1fr;gap:.8rem;align-items:start;padding:.32rem 0;color:var(--on-deep)}
+.sf-contact ul{list-style:none;margin:0;padding:0}
+.sf-contact svg{width:18px;height:18px;color:var(--champagne);margin-top:.25rem}
+.sf-contact a{text-decoration:none;transition:color .5s var(--lux)}
+.sf-contact a:hover{color:var(--champagne)}
+.sf-bottom{border-top:1px solid rgba(255,255,255,.1)}
+.sf-bottom .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.8rem 2rem;padding:1.4rem 0;font-size:.86rem}
+.sf-bottom a{text-decoration:none;color:var(--on-deep)}
+.sf-bottom a:hover{color:var(--champagne)}
+.sf-bottom b{color:var(--champagne);font-weight:600}
+@media (max-width:1180px){.sf-top{grid-template-columns:repeat(3,minmax(0,1fr))}.sf-brand{grid-column:1/-1}}
+@media (max-width:760px){.sf-top{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.sf-top{grid-template-columns:1fr}}
+
+/* ================= Responsive ================= */
+@media (max-width:1240px){
+  .nav,.bar .btn,.hotels{display:none}
+  .menu-toggle{display:grid}
+}
+@media (max-width:1080px){
+  .nav,.bar .btn{display:none}
+  .menu-toggle{display:grid}
+  .packages,.tours{grid-template-columns:1fr 1fr}
+  .pkg.best{grid-column:1/-1;order:-1}
+}
+@media (max-width:820px){
+  .intro,.about,.healing,.loc,.contact,.td{grid-template-columns:1fr}
+  .rooms,.packages,.tours{grid-template-columns:1fr}
+  .room .frame{aspect-ratio:4/3}
+  .about .small{display:none}
+  .about .frame{aspect-ratio:4/4.4}
+  .mapbox{position:relative;top:0;aspect-ratio:4/3.4;width:100%;margin-top:1.5rem}
+  .place.active{transform:scale(1.02)}
+  .loc{display:flex;flex-direction:column}
+  .qrs{gap:.6rem}.qr{padding:.6rem}.qr span{display:none}
+  .lb{padding:4rem 1rem}
+  .lb .nav-btn{top:auto;bottom:1rem;translate:none}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;transition-delay:0s!important}
+  [data-reveal]{opacity:1!important;transform:none!important;clip-path:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="cursor" aria-hidden="true"></div>
+
+<header class="bar" id="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="#home" aria-label="Ree Hotel, back to top">
+      <img src="https://ree-riverside.com/images/logo.png" alt="Ree Hotel" onerror="this.parentNode.classList.add('no-logo');this.remove()">
+      <span class="word">Ree Hotel</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#home">Home</a><a href="#rooms">Rooms</a><a href="#wellness">Wellness</a><a href="#tours">Tours</a><a href="#location">Location</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="hotels sis">
+      <button class="hotels-btn" aria-expanded="false" aria-haspopup="true">Our hotels <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="hotels-menu" role="menu">
+        <a href="#home" role="menuitem"><strong>Ree Hotel</strong><small>Thonburi, Bangkok</small><em>You're here</em></a>
+        <a href="#" data-sister-link role="menuitem"><strong data-sister-name>Our new hotel</strong><small data-sister-area>Bangkok</small><em class="soon">Opening soon</em></a>
+      </div>
+    </div>
+    <a class="btn" data-book href="#">Book your stay</a>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#home">Home</a><a href="#rooms">Rooms</a><a href="#wellness">Wellness</a><a href="#packages" class="sub">Retreat packages</a><a href="#massage" class="sub">Wellness massage</a><a href="#healing" class="sub">Private healing</a><a href="#tours">Tours</a><a href="#location">Location</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  <a class="sis" href="#" data-sister-link style="font-size:1.4rem;color:var(--champagne)">Our new hotel, opening soon</a>
+  <a class="btn gold" data-book href="#" style="margin-top:1.5rem;font-family:var(--body);font-size:1rem;border-bottom:1px solid var(--champagne)">Book your stay</a>
+</nav>
+
+<main id="top">
+
+<!-- ============ Home: intro + home information ============ -->
+<section id="home" data-title="Home" class="home" aria-label="Home">
+  <div class="hero" aria-label="Welcome">
+    <div class="hero-media frame">
+      <div class="slide on"><img src="https://ree-riverside.com/images/room-balcony.jpeg" alt="Deluxe Balcony Room at Ree Hotel with natural light"></div>
+      <div class="slide"><img src="https://ree-riverside.com/images/sound-healing-room.jpeg" alt="Sound healing room with Tibetan singing bowls"></div>
+      <div class="slide"><img src="https://ree-riverside.com/images/lobby-warm.jpeg" alt="Ree Hotel lobby in warm evening light"></div>
+    </div>
+    <div class="wrap">
+      <p class="kicker fade-in" style="transition-delay:.3s">Thonburi, Bangkok</p>
+      <h1><span class="line"><span style="transition-delay:.2s">An Urban Sanctuary</span></span><span class="line"><span style="transition-delay:.35s">in Bangkok</span></span></h1>
+      <p class="tagline fade-in" style="transition-delay:.8s" aria-live="polite"><span id="tagline">Slow down in a real Bangkok neighborhood</span></p>
+      <div class="sub fade-in" style="transition-delay:1s">
+        <p>Simple, comfortable stays with gentle wellness in old Bangkok, a 14-minute walk from the river boats and 1.2 km from BTS Wongwian Yai.</p>
+        <div class="actions">
+          <a class="btn gold" data-book href="#">Book your stay <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          <a class="btn on-dark" href="#rooms">See rooms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="slide-tabs fade-in" style="transition-delay:1.2s" role="tablist" aria-label="Highlights">
+        <button role="tab" aria-selected="true" data-slide="0">Urban sanctuary<i></i></button>
+        <button role="tab" aria-selected="false" data-slide="1">Gentle wellness<i></i></button>
+        <button role="tab" aria-selected="false" data-slide="2">Local Thai life<i></i></button>
+      </div>
+    </div>
+    <button class="scroll-cue" aria-label="Scroll down to discover more"></button>
+  </div>
+
+  <div class="home-block" id="about">
+  <div class="wrap about">
+    <div class="about-media">
+      <figure class="about-photo" data-reveal="up">
+        <img src="https://images.unsplash.com/photo-1613672803979-a6edfc5a179b?fm=jpg&q=75&w=1100&h=1375&fit=crop&crop=center" alt="Wat Arun, the Temple of Dawn, on the Chao Phraya River in Thonburi" onerror="this.closest('.about-media').classList.add('no-photo')">
+        <figcaption>Wat Arun on the Chao Phraya, a short boat ride from Ree</figcaption>
+        <small>Photo: Anantachai Saothong, Unsplash</small>
+      </figure>
+      <div class="scene river-scene fallback-scene" role="img" aria-label="Animated Thonburi riverside at dusk with a temple, a long-tail boat and floating lanterns">
+        <svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="rsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16203a"/><stop offset=".45" stop-color="#3a3d63"/><stop offset=".8" stop-color="#b07d5c"/><stop offset="1" stop-color="#e6b06d"/></linearGradient>
+            <linearGradient id="rwater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3a5c"/><stop offset="1" stop-color="#121a2e"/></linearGradient>
+            <radialGradient id="rsun" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd697" stop-opacity=".9"/><stop offset="1" stop-color="#ffd697" stop-opacity="0"/></radialGradient>
+            <g id="temples" fill="#121a2e">
+              <path d="M0 300 C20 270 45 276 58 290 C70 268 98 272 104 300 Z"/>
+              <path d="M300 300 C312 272 344 270 356 292 C368 276 392 280 400 300 Z"/>
+              <path d="M52 300 v-18 h6 v-14 h4 q2-30 6-46 l2-14 2 14 q4 16 6 46 h4 v14 h6 v18z"/>
+              <path d="M330 300 v-18 h6 v-14 h4 q2-30 6-46 l2-14 2 14 q4 16 6 46 h4 v14 h6 v18z"/>
+              <path d="M98 300 v-26 h8 v-20 h6 q3-44 9-70 l3-22 3 22 q6 26 9 70 h6 v20 h8 v26z"/>
+              <path d="M260 300 v-26 h8 v-20 h6 q3-44 9-70 l3-22 3 22 q6 26 9 70 h6 v20 h8 v26z"/>
+              <path d="M160 300 v-34 h10 v-28 h8 q4-66 14-104 l5-30 3-14 3 14 5 30 q10 38 14 104 h8 v28 h10 v34z"/>
+              <rect x="0" y="296" width="400" height="8"/>
+            </g>
+          </defs>
+          <rect width="400" height="304" fill="url(#rsky)"/>
+          <g class="tw"><circle cx="40" cy="40" r="1.3" fill="#fff"/><circle cx="120" cy="70" r="1" fill="#fff"/><circle cx="330" cy="50" r="1.4" fill="#fff"/><circle cx="250" cy="28" r="1" fill="#fff"/><circle cx="370" cy="110" r="1" fill="#fff"/></g>
+          <circle class="sun-glow" cx="300" cy="282" r="95" fill="url(#rsun)"/>
+          <circle cx="300" cy="282" r="30" fill="#f6c983"/>
+          <g class="birds"><path class="bird" d="M0 0q6-6 12 0q6-6 12 0" fill="none" stroke="#1b2238" stroke-width="1.6" stroke-linecap="round"/><path class="bird b2" d="M30 14q5-5 10 0q5-5 10 0" fill="none" stroke="#1b2238" stroke-width="1.4" stroke-linecap="round"/></g>
+          <use href="#temples"/>
+          <g class="lights"><circle cx="197" cy="200" r="1.6" fill="#ffd697"/><circle cx="197" cy="240" r="1.6" fill="#ffd697"/><circle cx="117" cy="252" r="1.3" fill="#ffd697"/><circle cx="283" cy="252" r="1.3" fill="#ffd697"/></g>
+          <rect y="304" width="400" height="196" fill="url(#rwater)"/>
+          <g opacity=".28" transform="translate(0 608) scale(1 -1)"><use href="#temples"/></g>
+          <ellipse class="sun-ref" cx="300" cy="350" rx="18" ry="46" fill="#f6c983" opacity=".35"/>
+          <g class="shimmer">
+            <rect x="40" y="322" width="70" height="1.6" rx="1" fill="#f3c98a"/><rect x="230" y="334" width="90" height="1.6" rx="1" fill="#f3c98a"/>
+            <rect x="120" y="356" width="60" height="1.4" rx="1" fill="#e9dccb"/><rect x="270" y="372" width="70" height="1.4" rx="1" fill="#f3c98a"/>
+            <rect x="20" y="398" width="80" height="1.2" rx="1" fill="#e9dccb"/><rect x="180" y="414" width="60" height="1.2" rx="1" fill="#f3c98a"/>
+          </g>
+          <g class="boat">
+            <path d="M0 0 Q48 14 118 4 L126 -8 L110 -3 Q52 4 6 -7 Z" fill="#0d1322"/>
+            <rect x="36" y="-20" width="44" height="12" rx="3" fill="#0d1322"/>
+            <path d="M32 -20 h52" stroke="#c9aa72" stroke-width="1.5"/>
+            <circle class="lamp" cx="40" cy="-24" r="2.4" fill="#ffd697"/>
+            <path d="M-4 4 q-20 2-44 0 M-6 9 q-16 2-34 0" stroke="#e9dccb" stroke-width="1" opacity=".5" fill="none"/>
+          </g>
+          <g class="kr k1"><path d="M0 0 q10-10 20 0 q-10 6-20 0z" fill="#d9c9a3"/><circle class="lamp" cx="10" cy="-6" r="2.2" fill="#ffcf7a"/></g>
+          <g class="kr k2"><path d="M0 0 q10-10 20 0 q-10 6-20 0z" fill="#d9c9a3"/><circle class="lamp" cx="10" cy="-6" r="2.2" fill="#ffcf7a"/></g>
+          <g class="kr k3"><path d="M0 0 q10-10 20 0 q-10 6-20 0z" fill="#d9c9a3"/><circle class="lamp" cx="10" cy="-6" r="2.2" fill="#ffcf7a"/></g>
+        </svg>
+        <p class="scene-cap">Thonburi riverside, old Bangkok</p>
+      </div>
+    </div>
+    <div>
+      <p class="kicker" data-reveal="up">About us</p>
+      <h2 data-reveal="up" style="--d:.1s">A slower, more meaningful way to experience local Thai life</h2>
+      <p data-reveal="up" style="--d:.2s;margin-top:1.6rem;color:var(--moss)">Tucked inside a real local neighborhood, Ree Hotel offers simple, comfortable stays combined with gentle wellness: meditation, sound healing, and quiet cultural moments.</p>
+      <p class="mantra" data-reveal="up" style="--d:.3s">Slow down. Reconnect. Reset.</p>
+      <div class="actions" data-reveal="up" style="--d:.4s">
+        <a class="btn" href="#rooms">Explore rooms</a>
+        <a class="btn" href="#healing">Book a private healing session</a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="home-block tint">
+    <div class="wrap">
+      <div class="head-row">
+        <div><p class="kicker" data-reveal="up">Rooms</p><h2 data-reveal="up" style="--d:.1s">Comfort and calm, under one roof</h2></div>
+        <a class="textlink" href="#rooms" data-reveal="up" style="--d:.2s">View all rooms <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="rp">
+      <article class="card rp-card" data-reveal="up" style="--d:0s">
+        <div class="frame"><img src="https://ree-riverside.com/images/room-deluxe-family.jpeg" alt="Deluxe Family Room"></div>
+        <div class="rp-body"><h3>Deluxe Family Room</h3><ul class="checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Ideal for families or longer stays</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Warm stone-feature wall</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Extra bedding available</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Spacious and bright</span></li></ul><a class="btn" data-book href="#">Book now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="card rp-card" data-reveal="up" style="--d:0.12s">
+        <div class="frame"><img src="https://ree-riverside.com/images/room-balcony.jpeg" alt="Deluxe Balcony Room"></div>
+        <div class="rp-body"><h3>Deluxe Balcony Room</h3><ul class="checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Private balcony</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Natural light</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Leafy neighborhood outlook</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Calm and quiet</span></li></ul><a class="btn" data-book href="#">Book now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      <article class="card rp-card" data-reveal="up" style="--d:0.24s">
+        <div class="frame"><img src="https://ree-riverside.com/images/room-dormitory.jpeg" alt="Mixed Gender Dormitory"></div>
+        <div class="rp-body"><h3>Mixed Gender Dormitory</h3><ul class="checks"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Bunk beds</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Shared bathroom</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Air-conditioned</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12.5l4.5 4.5L19 7"/></svg><span>Great for solo travelers</span></li></ul><a class="btn" data-book href="#">Book now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+      </article>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-block">
+    <div class="wrap">
+      <div class="hood-top">
+        <div>
+          <span class="chip" data-reveal="up">Thonburi, Bangkok</span>
+          <h2 data-reveal="up" style="--d:.1s">Guests love exploring the neighborhood</h2>
+          <p data-reveal="up" style="--d:.2s;margin-top:1.3rem">Ree Hotel sits in Thonburi, old Bangkok, among quiet canals and everyday local life. Take the river boat to the city's great temples, or the sky train downtown.</p>
+          <p class="addr" data-reveal="up" style="--d:.3s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-address>Thonburi, Bangkok, Thailand</span></p>
+        </div>
+        <div class="stats">
+          <div class="stat s1" data-reveal="up"><b>150 m</b><span>to 7-Eleven and local market</span></div>
+          <div class="stat s2" data-reveal="up" style="--d:.1s"><b>600 m</b><span>to Siam Charoennakhon Pier</span></div>
+          <div class="stat s3" data-reveal="up" style="--d:.2s"><b>14 min</b><span>walk to the river boats</span></div>
+          <div class="stat s4" data-reveal="up" style="--d:.3s"><b>1.2 km</b><span>to BTS Wongwian Yai</span></div>
+        </div>
+      </div>
+      <div class="lists">
+        <div class="list-card" data-reveal="up">
+          <h3><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="13" cy="4.5" r="1.8"/><path d="M10 21l2-6 2.5 2.5V21M8 12l2.5-4.5 4 1.5 2 3M12 15l-1-4"/></svg></i>Walk from the hotel</h3>
+          <div class="row"><span>7-Eleven and local market</span><span class="pill">150 m</span></div><div class="row"><span>Pinklao Navy Hospital</span><span class="pill">300 m</span></div><div class="row"><span>Samitivej Hospital</span><span class="pill">300 m</span></div><div class="row"><span>Siam Charoennakhon Pier</span><span class="pill">600 m</span></div>
+        </div>
+        <div class="list-card" data-reveal="up" style="--d:.12s">
+          <h3><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l1.5 4h-3zM9 6h6l1.5 4h-9zM6 10h12l1.5 4h-15z"/><path d="M5 14v7h14v-7"/></svg></i>Top sights by river boat</h3>
+          <div class="row"><span>Wat Arun</span><span class="pill">Boat</span></div><div class="row"><span>Wat Pho</span><span class="pill">Boat</span></div><div class="row"><span>Grand Palace</span><span class="pill">Boat</span></div><div class="row"><span>Flower Market</span><span class="pill">Boat</span></div><div class="row"><span>Icon Siam</span><span class="pill">Boat</span></div><div class="row"><span>Chinatown</span><span class="pill">Boat</span></div><div class="row"><span>Asiatique</span><span class="pill">Boat</span></div><div class="row"><span>Khao San Road</span><span class="pill">Boat</span></div>
+        </div>
+        <div class="list-card" data-reveal="up" style="--d:.24s">
+          <h3><i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2"/></svg></i>Getting around</h3>
+          <div class="row"><span>River boat pier</span><span class="pill">600 m</span></div><div class="row"><span>BTS Wongwian Yai, exit 2</span><span class="pill">1.2 km</span></div><div class="row"><span>All-day river pass</span><span class="pill">150 THB</span></div><div class="row"><span>Single boat journey</span><span class="pill">40 THB</span></div>
+          <a class="textlink" href="#location" style="margin-top:1.2rem">See it on the map <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="home-block reviews-block">
+    <div class="wrap">
+      <div class="head-row">
+        <div><p class="kicker" data-reveal="up">Guest reviews</p><h2 data-reveal="up" style="--d:.1s">Five-star moments from our guests</h2></div>
+      </div>
+      <div class="ratings" id="ratings" data-reveal="up"></div>
+    </div>
+    <div class="marquee" id="mq1" data-reveal="up"><div class="m-track"></div></div>
+    <div class="marquee rev" id="mq2" data-reveal="up" style="--d:.15s"><div class="m-track"></div></div>
+  </div>
+
+  <div class="home-block sister-block sis" id="sister">
+    <div class="wrap sister">
+      <div>
+        <span class="chip" data-reveal="up"><i></i>Opening soon</span>
+        <h2 data-reveal="up" style="--d:.1s" id="sisTitle">A new home from the Ree family: <span data-sister-name>our new hotel</span></h2>
+        <p class="open-on" data-reveal="up" style="--d:.15s" data-sister-when>Opening soon</p>
+        <p data-reveal="up" style="--d:.2s" data-sister-story>Our sister hotel is on its way, with the same calm, caring stay you know from Ree. Be the first to hear when bookings open.</p>
+        <div class="countdown" data-reveal="up" style="--d:.25s" aria-label="Time until opening" hidden>
+          <div><b data-cd="d">00</b><span>Days</span></div><div><b data-cd="h">00</b><span>Hours</span></div><div><b data-cd="m">00</b><span>Minutes</span></div><div><b data-cd="s">00</b><span>Seconds</span></div>
+        </div>
+        <div class="offer" data-reveal="up" style="--d:.3s" hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7c-2-3-6-3-6 0s4 0 6 0zm0 0c2-3 6-3 6 0s-4 0-6 0z"/></svg>
+          <p data-sister-offer></p>
+        </div>
+        <div class="actions" data-reveal="up" style="--d:.35s">
+          <button class="btn gold" type="button" data-interest>Be the first to know <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+          <a class="btn on-dark" href="#" data-sister-site hidden target="_blank" rel="noopener">Visit the website <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+      <div class="sis-visual" data-reveal="up" style="--d:.2s" aria-hidden="true">
+        <span class="ripple"></span><span class="ripple"></span><span class="ripple"></span>
+        <div class="mono"><div><strong data-sister-mono>Ree</strong><span>Opening soon</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Rooms ============ -->
+<section id="rooms" class="alt" data-title="Rooms">
+  <div class="wrap">
+    <a class="sis-banner sis" href="#" data-sister-link data-reveal="up"><span><b>Opening soon</b><span data-sister-banner>Our new sister hotel is on its way.</span></span><span class="go">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a>
+    <div class="intro">
+      <div><p class="kicker" data-reveal="up">Rooms</p><h2 data-reveal="up" style="--d:.1s">Simple comfort, designed for rest</h2></div>
+      <p data-reveal="up" style="--d:.2s">Spacious, bright, and ideal for families or longer stays. Thoughtfully equipped with everything you need, including extra bedding for big families.</p>
+    </div>
+    <div class="rooms">
+      <a class="card room" data-book href="#" data-reveal="up">
+        <div class="frame"><img src="https://ree-riverside.com/images/room-deluxe-family.jpeg" alt="Deluxe Family Room"></div>
+        <h3>Deluxe Family Room</h3>
+        <p>Spacious and bright with a warm stone-feature wall. Ideal for families or longer stays. Extra bedding available.</p>
+        <span class="more">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="card room" data-book href="#" data-reveal="up" style="--d:.15s">
+        <div class="frame"><img src="https://ree-riverside.com/images/room-balcony.jpeg" alt="Deluxe Balcony Room"></div>
+        <h3>Deluxe Balcony Room</h3>
+        <p>A calm room with its own private balcony, natural light, and a leafy outlook over the neighborhood.</p>
+        <span class="more">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="card room" data-book href="#" data-reveal="up" style="--d:.3s">
+        <div class="frame"><img src="https://ree-riverside.com/images/room-dormitory.jpeg" alt="Mixed Gender Dormitory"></div>
+        <h3>Mixed Gender Dormitory</h3>
+        <p>Bunk beds with shared bathroom. Comfortable, air-conditioned, and great for solo travelers.</p>
+        <span class="more">Check availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+    <div class="direct" data-reveal="up">
+      <div><strong>Rest well. Wake up easy.</strong><span>Best rate when you book direct with us.</span></div>
+      <a class="btn" data-book href="#">View availability <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- ============ Wellness: packages, massage, healing ============ -->
+<section id="wellness" data-title="Wellness">
+  <div class="wrap well-intro">
+    <p class="kicker" data-reveal="up">Ree Wellness</p>
+    <h2 data-reveal="up" style="--d:.1s">Wellness, your way</h2>
+    <p data-reveal="up" style="--d:.2s">Retreat packages, therapeutic massage and private healing, all in one calm place. Choose what your body and mind need today.</p>
+  </div>
+  <div class="sub-block" id="packages">
+  <div class="wrap"><div class="svc-title" data-reveal="up"><span></span><h3>Retreat packages</h3><span></span></div>
+  </div>
+  <div class="wrap">
+    <div class="intro">
+      <div><p class="kicker" data-reveal="up">Stay and unwind</p><h2 data-reveal="up" style="--d:.1s">Choose your stay</h2></div>
+      <p data-reveal="up" style="--d:.2s">Wellness doesn't need to be complicated or luxurious. It can be effortless and holistic, fitting naturally into your stay through simple local experiences.</p>
+    </div>
+    <div class="packages">
+      <article class="card pkg alt" data-reveal="up" style="background:var(--sage-mist)">
+        <h3>Urban Reset</h3>
+        <p class="len">1 night, 2 days</p>
+        <p>A gentle reset for short-stay travelers.</p>
+        <ul>
+          <li>Welcome herbal drink</li><li>Deluxe comfortable room</li><li>Morning cold-press green or fresh fruit juice</li><li>Nourishing breakfast and evening snacks</li><li>Morning meditation and yoga</li><li>Evening Thai massage in room</li>
+        </ul>
+        <div class="buy">
+          <a href="https://buy.stripe.com/aFacN7boE1cl0w4gwp7IY1X" target="_blank" rel="noopener">Book for 1 person <b>1,850 THB</b></a>
+          <a href="https://buy.stripe.com/fZufZj9gwcV33Igeoh7IY1Y" target="_blank" rel="noopener">Book for 2 people <b>2,900 THB</b></a>
+        </div>
+      </article>
+      <article class="card pkg best" data-reveal="up" style="--d:.15s">
+        <span class="tag">Bestseller</span>
+        <h3>Wellness and Rejuvenate</h3>
+        <p class="len">1 night, 2 days</p>
+        <p>Our most-booked package, a balanced wellness escape.</p>
+        <ul>
+          <li>Welcome herbal drink</li><li>Deluxe comfortable room</li><li>Morning cold-press green or fresh fruit juice</li><li>Nourishing breakfast and evening snacks</li><li>Morning meditation and yoga</li><li>Half-day temple visit along the Chao Phraya River</li><li>Evening Thai massage in room</li>
+        </ul>
+        <div class="buy">
+          <a href="https://buy.stripe.com/eVqcN73Wc6wF1A84NH7IY1Z" target="_blank" rel="noopener">Book for 1 person <b>2,950 THB</b></a>
+          <a href="https://buy.stripe.com/14A3cx78o1cl3Iga817IY20" target="_blank" rel="noopener">Book for 2 people <b>4,200 THB</b></a>
+        </div>
+      </article>
+      <article class="card pkg" data-reveal="up" style="--d:.3s;background:var(--sage-mist)">
+        <h3>3-Day Inner Balance Retreat</h3>
+        <p class="len">3 days, signature retreat</p>
+        <p>A deeper reset for body and nervous system.</p>
+        <ul>
+          <li>Welcome herbal drink</li><li>Deluxe comfortable room</li><li>Morning cold-press juice and nourishing breakfast</li><li>Morning meditation and yoga</li><li>Lunch and evening snacks</li><li>Half-day temple visit along the Chao Phraya River</li><li>Evening Reiki sound healing to calm the nervous system</li><li>Late check-out</li>
+        </ul>
+        <div class="buy">
+          <a href="https://buy.stripe.com/aFaeVf78o1cldiQa817IY21" target="_blank" rel="noopener">Book for 1 person <b>5,500 THB</b></a>
+          <a href="https://buy.stripe.com/5kQeVfeAQg7f7Yw7ZT7IY22" target="_blank" rel="noopener">Book for 2 people <b>6,950 THB</b></a>
+        </div>
+      </article>
+    </div>
+    <p class="note" data-reveal="up">Pay securely online. Prices are per package.</p>
+  </div>
+</div>
+  <div class="sub-block alt" id="massage">
+  <div class="wrap"><div class="svc-title" data-reveal="up"><span></span><h3>Wellness massage</h3><span></span></div>
+  </div>
+  <div class="wrap">
+    <div class="intro">
+      <div><p class="kicker" data-reveal="up">60-minute treatments</p><h2 data-reveal="up" style="--d:.1s">Relax, recharge, rejuvenate</h2></div>
+      <p data-reveal="up" style="--d:.2s">Treat yourself to 60 minutes of pure relaxation with our professional therapists. Relieve stress, ease pain and restore balance for your body and mind. Select a treatment to book.</p>
+    </div>
+    <div class="massage">
+      <div>
+        <div class="treat-list">
+          <button class="treat" type="button" data-treat="Thai Massage" data-price="450" data-reveal="up" style="--d:0.00s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM5 21c1-5 3-8 7-8s6 3 7 8M8 13l-3-3M16 13l3-3"/></svg></span>
+            <strong>Thai Massage</strong><small>Medium to strong pressure for relaxation</small>
+            <span class="price"><b>450 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Foot Massage" data-price="450" data-reveal="up" style="--d:0.05s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 3c2 0 3 2 3 5s-1 5 0 8-1 5-3 5-3-2-3-4 1-4 1-6-1-4-1-5 1-3 3-3z"/><circle cx="15" cy="5" r="1.2"/><circle cx="17.5" cy="7.5" r="1"/><circle cx="18.5" cy="10.5" r=".9"/></svg></span>
+            <strong>Foot Massage</strong><small>Circulation enhancement and relaxation</small>
+            <span class="price"><b>450 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Office Syndrome Therapy" data-price="550" data-reveal="up" style="--d:0.10s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="14" height="10" rx="1.5"/><path d="M8 18h4M10 14v4M20 9c-1 3-1 6 0 9"/></svg></span>
+            <strong>Office Syndrome Therapy</strong><small>Neck, shoulder and upper-back focus</small>
+            <span class="price"><b>550 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Back and Hip Pain Relief Massage" data-price="550" data-reveal="up" style="--d:0.15s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v18M9 6c-2 2-2 4 0 6s2 4 0 6M15 6c2 2 2 4 0 6s-2 4 0 6"/></svg></span>
+            <strong>Back and Hip Pain Relief Massage</strong><small>Deep tension release and mobility improvement</small>
+            <span class="price"><b>550 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Deep Tissue Massage" data-price="650" data-reveal="up" style="--d:0.20s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 15c3-6 13-6 16 0M7 15v4M12 12v7M17 15v4"/></svg></span>
+            <strong>Deep Tissue Massage</strong><small>For chronic stiffness and fascia tightness</small>
+            <span class="price"><b>650 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Oil Massage" data-price="650" data-reveal="up" style="--d:0.25s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3c3 4 5 7 5 10a5 5 0 0 1-10 0c0-3 2-6 5-10z"/></svg></span>
+            <strong>Oil Massage</strong><small>Balances energy, reduces fatigue and improves sleep</small>
+            <span class="price"><b>650 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Herbal Compress Therapy" data-price="650" data-reveal="up" style="--d:0.30s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="13" r="6"/><path d="M12 7V3M9 4l3 3 3-3"/></svg></span>
+            <strong>Herbal Compress Therapy</strong><small>Warm herbal pouch for pain relief and inflammation</small>
+            <span class="price"><b>650 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Gua Sha Therapy" data-price="650" data-reveal="up" style="--d:0.35s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 15c0-5 4-9 9-9h5c0 7-5 13-12 13-1.2 0-2-1.8-2-4z"/></svg></span>
+            <strong>Gua Sha Therapy</strong><small>Buffalo horn Gua Sha for lymphatic drainage and holistic organ support</small>
+            <span class="price"><b>650 THB</b><span>60 min</span></span>
+          </button>
+          <button class="treat" type="button" data-treat="Facial Gua Sha Rejuvenation" data-price="650" data-reveal="up" style="--d:0.40s">
+            <span class="ti"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="11" r="7"/><path d="M9 10h.01M15 10h.01M9.5 14c1.5 1 3.5 1 5 0"/></svg></span>
+            <strong>Facial Gua Sha Rejuvenation</strong><small>Reduces dark circles and pigmentation, boosts collagen</small>
+            <span class="price"><b>650 THB</b><span>60 min</span></span>
+          </button>
+        </div>
+        <div class="m-cta" data-reveal="up">
+          <button class="btn" type="button" data-treat="Wellness massage" data-price="">Book a massage <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></button>
+          <p>Or call us: <a class="tel" data-phone href="#"></a></p>
+        </div>
+      </div>
+      <div class="reels" id="reels">
+        <div class="spa" data-reveal="up" aria-label="Animated candle, steam and flowers" role="img">
+          <svg viewBox="0 0 400 460" aria-hidden="true">
+            <defs>
+              <radialGradient id="gl" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffd89a" stop-opacity=".75"/><stop offset="1" stop-color="#ffd89a" stop-opacity="0"/></radialGradient>
+              <linearGradient id="wax" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#f4ede2"/><stop offset="1" stop-color="#cdbfa9"/></linearGradient>
+              <linearGradient id="stone" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#55627a"/><stop offset="1" stop-color="#2a3448"/></linearGradient>
+            </defs>
+            <circle class="glow" cx="200" cy="250" r="120" fill="url(#gl)"/>
+            <path class="steam" d="M180 240 C165 200 200 180 182 140 S170 90 186 60"/>
+            <path class="steam s2" d="M205 238 C222 196 188 176 208 134 S222 84 204 50"/>
+            <path class="steam s3" d="M222 244 C240 210 212 190 230 150 S242 110 228 80"/>
+            <ellipse class="ring" cx="200" cy="430" rx="120" ry="16"/>
+            <ellipse class="ring r2" cx="200" cy="430" rx="120" ry="16"/>
+            <ellipse class="ring r3" cx="200" cy="430" rx="120" ry="16"/>
+            <ellipse cx="200" cy="420" rx="118" ry="22" fill="url(#stone)"/>
+            <ellipse cx="200" cy="384" rx="92" ry="24" fill="url(#stone)" opacity=".95"/>
+            <ellipse cx="200" cy="352" rx="70" ry="20" fill="url(#stone)" opacity=".9"/>
+            <rect x="168" y="270" width="64" height="72" rx="10" fill="url(#wax)"/>
+            <ellipse cx="200" cy="272" rx="32" ry="7" fill="#fbf6ee"/>
+            <line x1="200" y1="270" x2="200" y2="258" stroke="#3a3027" stroke-width="2"/>
+            <path class="flame" d="M200 206 C214 228 214 246 200 258 C186 246 186 228 200 206Z" fill="#ffc46b"/>
+            <path class="flame2" d="M200 226 C207 238 207 248 200 256 C193 248 193 238 200 226Z" fill="#fff3cf"/>
+            <g class="petal"><g transform="translate(92 300)"><path d="M0 0c10-14 26-10 22 4-12 4-18 6-22-4z" fill="#f6efe4"/><path d="M0 0c-14-10-10-26 4-22 4 12 6 18-4 22z" fill="#f6efe4"/><path d="M0 0c-10 14-26 10-22-4 12-4 18-6 22 4z" fill="#f6efe4"/><path d="M0 0c14 10 10 26-4 22-4-12-6-18 4-22z" fill="#f6efe4"/><circle r="4" fill="#e7b85c"/></g></g>
+            <g class="petal p2"><g transform="translate(310 250) scale(.8)"><path d="M0 0c10-14 26-10 22 4-12 4-18 6-22-4z" fill="#f6efe4"/><path d="M0 0c-14-10-10-26 4-22 4 12 6 18-4 22z" fill="#f6efe4"/><path d="M0 0c-10 14-26 10-22-4 12-4 18-6 22 4z" fill="#f6efe4"/><path d="M0 0c14 10 10 26-4 22-4-12-6-18 4-22z" fill="#f6efe4"/><circle r="4" fill="#e7b85c"/></g></g>
+            <g class="petal p3"><g transform="translate(320 380) scale(.6)"><path d="M0 0c10-14 26-10 22 4-12 4-18 6-22-4z" fill="#f6efe4"/><path d="M0 0c-14-10-10-26 4-22 4 12 6 18-4 22z" fill="#f6efe4"/><path d="M0 0c-10 14-26 10-22-4 12-4 18-6 22 4z" fill="#f6efe4"/><path d="M0 0c14 10 10 26-4 22-4-12-6-18 4-22z" fill="#f6efe4"/><circle r="4" fill="#e7b85c"/></g></g>
+          </svg>
+          <p class="cap"><b>60 minutes</b>of pure relaxation</p>
+        </div>
+        <div class="trust" data-reveal="up">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21c-4-3-8-6-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 5-4 8-8 11z"/><path d="M12 9c-1.5 2-1.5 4 0 6 1.5-2 1.5-4 0-6z"/></svg>
+          <div><strong>Professional therapists you can trust</strong><span>Your body deserves the best. Each session is 60 minutes.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-block deep" id="healing">
+  <div class="wrap"><div class="svc-title" data-reveal="up"><span></span><h3>Private healing</h3><span></span></div>
+  </div>
+  <div class="wrap healing">
+    <div class="scene heal-scene" data-reveal="up" role="img" aria-label="Animated singing bowl with sound waves, incense smoke and a lotus">
+      <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs>
+          <radialGradient id="hbg" cx="50%" cy="60%" r="70%"><stop offset="0" stop-color="#3a4466"/><stop offset="1" stop-color="#121a2e"/></radialGradient>
+          <linearGradient id="hbowl" x1="0" x2="1"><stop offset="0" stop-color="#8a6a35"/><stop offset=".45" stop-color="#e6c483"/><stop offset="1" stop-color="#7a5a2c"/></linearGradient>
+          <radialGradient id="hglow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e6c483" stop-opacity=".45"/><stop offset="1" stop-color="#e6c483" stop-opacity="0"/></radialGradient>
+        </defs>
+        <rect width="500" height="400" fill="url(#hbg)"/>
+        <circle class="sun-glow" cx="250" cy="250" r="150" fill="url(#hglow)"/>
+        <ellipse class="wave" cx="250" cy="250" rx="82" ry="16" fill="none" stroke="#e6c483" stroke-width="1.3"/>
+        <ellipse class="wave w2" cx="250" cy="250" rx="82" ry="16" fill="none" stroke="#e6c483" stroke-width="1.3"/>
+        <ellipse class="wave w3" cx="250" cy="250" rx="82" ry="16" fill="none" stroke="#e6c483" stroke-width="1.3"/>
+        <path class="hum" d="M226 230 q6-10 0-20 q-6-10 0-20 q6-10 0-20" fill="none" stroke="#f3e2bd" stroke-width="1.4" stroke-linecap="round"/>
+        <path class="hum h2" d="M250 226 q6-10 0-20 q-6-10 0-20 q6-10 0-20 q6-10 0-20" fill="none" stroke="#f3e2bd" stroke-width="1.4" stroke-linecap="round"/>
+        <path class="hum h3" d="M274 230 q6-10 0-20 q-6-10 0-20 q6-10 0-20" fill="none" stroke="#f3e2bd" stroke-width="1.4" stroke-linecap="round"/>
+        <ellipse cx="250" cy="318" rx="130" ry="26" fill="#0d1322"/>
+        <ellipse cx="250" cy="300" rx="104" ry="24" fill="#6d4b3c"/>
+        <ellipse cx="250" cy="294" rx="96" ry="18" fill="#82594a"/>
+        <path d="M168 250 Q174 300 250 304 Q326 300 332 250 Z" fill="url(#hbowl)"/>
+        <ellipse cx="250" cy="250" rx="82" ry="16" fill="#3b2c18"/>
+        <ellipse cx="250" cy="250" rx="82" ry="16" fill="none" stroke="#f0d49a" stroke-width="3"/>
+        <g transform="rotate(-24 330 300)"><rect x="300" y="294" width="84" height="9" rx="4.5" fill="#5a3f2a"/><rect x="300" y="292" width="20" height="13" rx="6" fill="#c9aa72"/></g>
+        <line x1="88" y1="318" x2="104" y2="168" stroke="#a37a52" stroke-width="2.4" stroke-linecap="round"/>
+        <circle class="ember" cx="104" cy="168" r="3" fill="#ff9a4a"/>
+        <path class="smoke" d="M104 164 C92 140 118 124 104 100 S92 60 110 34"/>
+        <path class="smoke s2" d="M104 164 C116 138 90 120 106 94 S118 58 98 30"/>
+        <ellipse class="ripple-l" cx="410" cy="318" rx="46" ry="8" fill="none" stroke="#e9dccb" stroke-width="1"/>
+        <ellipse class="ripple-l r2" cx="410" cy="318" rx="46" ry="8" fill="none" stroke="#e9dccb" stroke-width="1"/>
+        <g class="lotus">
+          <path d="M410 316 C388 312 378 296 380 282 C394 286 404 298 410 316Z" fill="#e8c7c9"/>
+          <path d="M410 316 C432 312 442 296 440 282 C426 286 416 298 410 316Z" fill="#e8c7c9"/>
+          <path d="M410 316 C396 300 396 276 410 260 C424 276 424 300 410 316Z" fill="#f5e1e2"/>
+          <ellipse cx="410" cy="318" rx="34" ry="6" fill="#3f6b5a"/>
+        </g>
+        <g class="mote"><circle cx="180" cy="330" r="1.8" fill="#f3e2bd"/></g>
+        <g class="mote m2"><circle cx="300" cy="330" r="1.5" fill="#f3e2bd"/></g>
+        <g class="mote m3"><circle cx="240" cy="330" r="1.2" fill="#f3e2bd"/></g>
+        <g class="mote m4"><circle cx="350" cy="330" r="1.6" fill="#f3e2bd"/></g>
+      </svg>
+      <p class="scene-cap">Sound healing with Tibetan singing bowls</p>
+    </div>
+    <div>
+      <p class="kicker" data-reveal="up">Add-on or standalone visit</p>
+      <h2 data-reveal="up" style="--d:.1s">Book a private healing session</h2>
+      <p data-reveal="up" style="--d:.2s;margin:1.4rem 0 2rem">Private sessions in a calming dedicated space. Add one to any stay, or visit just for the session.</p>
+      <div class="session" data-reveal="up" style="--d:.25s"><strong>Reiki and sound therapy (chakra balance)</strong><span>1.5 hours</span><b>850 THB</b></div>
+      <div class="session" data-reveal="up" style="--d:.35s"><strong>Tibetan bowl massage and Reiki</strong><span>1.5 hours</span><b>850 THB</b></div>
+      <div data-reveal="up" style="--d:.45s"><a class="btn gold" href="https://buy.stripe.com/8x2bJ3boE4oxdiQ6VP7IY23" target="_blank" rel="noopener">Book a private session <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ============ Tours ============ -->
+<section id="tours" data-title="Tours" class="alt">
+  <div class="wrap">
+    <div class="intro">
+      <div><p class="kicker" data-reveal="up">Tour packages</p><h2 data-reveal="up" style="--d:.1s">Explore Bangkok and beyond</h2></div>
+      <p data-reveal="up" style="--d:.2s">Guided half-day and full-day tours departing from Ree Hotel. Select a tour to see what's included, then message us on your favorite app to book.</p>
+    </div>
+    <div class="tours" id="tourGrid"></div>
+    <p class="custom" data-reveal="up">Looking for something else? We build custom tours around your stay on request.</p>
+  </div>
+</section>
+
+<!-- ============ Location ============ -->
+<section id="location" data-title="Location">
+  <div class="wrap">
+    <div class="intro">
+      <div><p class="kicker" data-reveal="up">Location</p><h2 data-reveal="up" style="--d:.1s">In the heart of Thonburi, Bangkok</h2></div>
+      <p data-reveal="up" style="--d:.2s">Surrounded by quiet canals and everyday local life. Select a place to see it on the map.</p>
+    </div>
+    <div class="loc">
+      <div>
+        <div class="places" id="places"></div>
+        <div class="river" data-reveal="up">
+          <p>By river you can reach Asiatique, Wat Arun, Wat Pho, the Grand Palace, the Flower Market, Icon Siam, Chinatown and Khao San Road. An all-day river pass costs 150 THB and a single journey is 40 THB.</p>
+        </div>
+      </div>
+      <div class="mapbox" data-reveal="up">
+        <span class="maptag" id="maptag">Ree Hotel</span>
+        <iframe id="map" title="Map" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Gallery ============ -->
+<section id="gallery" class="alt" data-title="Gallery">
+  <div class="wrap">
+    <div class="intro">
+      <div><p class="kicker" data-reveal="up">Photo gallery</p><h2 data-reveal="up" style="--d:.1s">A look inside Ree Hotel</h2></div>
+      <p data-reveal="up" style="--d:.2s">Rooms, wellness spaces, and the Bangkok neighborhood around us. Select a photo to view it larger.</p>
+    </div>
+    <div class="tabs" role="group" aria-label="Filter photos" data-reveal="up">
+      <button aria-pressed="true" data-filter="all">All</button>
+      <button aria-pressed="false" data-filter="rooms">Rooms</button>
+      <button aria-pressed="false" data-filter="wellness">Wellness and healing</button>
+      <button aria-pressed="false" data-filter="hotel">Hotel and reception</button>
+    </div>
+    <div class="masonry" id="masonry"></div>
+  </div>
+</section>
+
+<!-- ============ Contact ============ -->
+<section id="contact" class="deep" data-title="Contact">
+  <div class="wrap"><a class="sis-banner sis" style="background:rgba(255,255,255,.06);border:1px solid rgba(201,170,114,.35)" href="#" data-sister-link data-reveal="up"><span><b>Opening soon</b><span data-sister-banner>Our new sister hotel is on its way.</span></span><span class="go">Learn more <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></span></a></div>
+  <div class="wrap contact">
+    <div>
+      <p class="kicker" data-reveal="up">Contact and booking</p>
+      <h2 data-reveal="up" style="--d:.1s">Ready to plan your stay?</h2>
+      <p data-reveal="up" style="--d:.2s;margin-top:1.4rem">Contact us directly or scan a code to chat on your favorite app. We'll help you choose the right room or package for your visit.</p>
+      <div class="actions" data-reveal="up" style="--d:.3s;margin-top:2rem">
+        <a class="btn gold" data-book href="#">Book your stay</a>
+        <a class="btn on-dark" href="mailto:hello@reehotel.com">Email us</a>
+      </div>
+      <div class="socials" data-reveal="up" style="--d:.4s">
+        <a class="btn on-dark" data-social="facebook" href="#" target="_blank" rel="noopener">Facebook</a>
+        <a class="btn on-dark" data-social="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn on-dark" data-social="tiktok" href="#" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <div class="qrs">
+      <div class="qr" data-reveal="up"><img src="https://ree-riverside.com/images/LINE%20Qr%20Code.jpeg" alt="LINE QR code"><strong>LINE</strong><span>Quick chat with the team</span></div>
+      <div class="qr" data-reveal="up" style="--d:.12s"><img src="https://ree-riverside.com/images/Whatsapp%20Qr%20Code.png" alt="WhatsApp QR code"><strong>WhatsApp</strong><span>Message us directly</span></div>
+      <div class="qr" data-reveal="up" style="--d:.24s"><img src="https://ree-riverside.com/images/Instagram%20Qr%20Code.png" alt="Instagram QR code"><strong>Instagram</strong><span>See guest moments</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+
+
+
+<!-- Tour detail -->
+<dialog class="tour-dialog" id="tourDialog" aria-labelledby="tdTitle">
+  <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="td">
+    <div class="td-main">
+      <p class="kicker" id="tdKind"></p>
+      <h2 id="tdTitle" style="font-size:clamp(1.9rem,3.2vw,2.6rem)"></h2>
+      <p class="len" id="tdLen"></p>
+      <p id="tdDesc" style="color:var(--moss)"></p>
+      <ul class="stops" id="tdStops"></ul>
+      <p style="font-size:.9rem;color:var(--moss);margin:0">Times, prices and pick-up are confirmed when you message us. Custom versions are welcome.</p>
+    </div>
+    <div class="td-side">
+      <h3>Book this tour</h3>
+      <p>Send us a message and the team will confirm your date and details.</p>
+      <div class="ask" id="tdAsk"></div>
+      <p style="margin:0 0 .6rem;font-size:.85rem">Or scan to chat</p>
+      <div class="mini-qr">
+        <div><img src="https://ree-riverside.com/images/LINE%20Qr%20Code.jpeg" alt="LINE QR code">LINE</div>
+        <div><img src="https://ree-riverside.com/images/Whatsapp%20Qr%20Code.png" alt="WhatsApp QR code">WhatsApp</div>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Book a massage -->
+<dialog class="m-dialog int-dialog" id="massageDlg" aria-labelledby="mTitle">
+  <div class="int">
+    <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p class="kicker" style="color:var(--champagne)">Book a massage</p>
+    <h3 id="mTitle"></h3>
+    <p class="m-price" id="mPrice"></p>
+    <p>Message or call us with your preferred day and time, and we'll confirm your session.</p>
+    <div class="ask" id="mAsk"></div>
+    <p style="margin:0 0 .6rem;font-size:.85rem">Or scan to chat</p>
+    <div class="mini-qr">
+      <div><img src="https://ree-riverside.com/images/LINE%20Qr%20Code.jpeg" alt="LINE QR code">LINE</div>
+      <div><img src="https://ree-riverside.com/images/Whatsapp%20Qr%20Code.png" alt="WhatsApp QR code">WhatsApp</div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Register interest in the new hotel -->
+<dialog class="int-dialog" id="interest" aria-labelledby="intTitle">
+  <div class="int">
+    <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <h3 id="intTitle">Be the first to know</h3>
+    <p>Send us a message and we'll tell you as soon as <span data-sister-name>our new hotel</span> opens for bookings.</p>
+    <div class="ask" id="intAsk"></div>
+    <p style="margin:0 0 .6rem;font-size:.85rem">Or scan to chat</p>
+    <div class="mini-qr">
+      <div><img src="https://ree-riverside.com/images/LINE%20Qr%20Code.jpeg" alt="LINE QR code">LINE</div>
+      <div><img src="https://ree-riverside.com/images/Whatsapp%20Qr%20Code.png" alt="WhatsApp QR code">WhatsApp</div>
+    </div>
+  </div>
+</dialog>
+
+<!-- Privacy policy -->
+<dialog class="privacy-dialog" id="privacy" aria-labelledby="pvTitle">
+  <div class="pv">
+    <div class="pv-head">
+      <button class="x" data-close aria-label="Close privacy policy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+      <p class="kicker">Privacy policy</p>
+      <h2 id="pvTitle">Your privacy at Ree Hotel</h2>
+      <small>Last updated: 26 May 2026</small>
+    </div>
+    <div class="pv-body">
+      <p>Ree Hotel (“we”, “us”, “our”) respects your privacy. This policy explains what personal information we collect when you visit reehotel.com or stay with us, how we use it, and the choices you have. By using our website or services, you agree to the practices described below.</p>
+
+      <h3>1. Information we collect</h3>
+      <p>We collect information you provide directly to us, and a limited amount of technical information automatically when you visit our website.</p>
+      <ul>
+        <li><strong>Booking information:</strong> name, email address, phone number, country, check-in/check-out dates, room preferences, special requests, and payment details (handled by our payment processor, see section 3).</li>
+        <li><strong>Communications:</strong> messages you send us by email, LINE, WhatsApp, Instagram, Facebook, or through our website.</li>
+        <li><strong>Stay information:</strong> details related to your stay, including identification required by Thai law for hotel guests.</li>
+        <li><strong>Technical information:</strong> IP address, browser type, device type, pages viewed, and approximate location, collected through standard web logs and analytics.</li>
+      </ul>
+
+      <h3>2. How we use your information</h3>
+      <ul>
+        <li>To process reservations and payments and to deliver your stay and wellness packages.</li>
+        <li>To respond to enquiries and provide customer support.</li>
+        <li>To comply with legal obligations, including Thai hotel guest registration requirements.</li>
+        <li>To improve our website and services, for example by understanding which pages and packages are most useful.</li>
+        <li>To send service-related messages (booking confirmations, reminders). We will only send marketing communications if you have asked to receive them, and you can unsubscribe at any time.</li>
+      </ul>
+
+      <h3>3. Third-party services</h3>
+      <p>We use trusted third-party providers to operate parts of our service. Each has its own privacy policy, and we encourage you to review them.</p>
+      <ul>
+        <li><strong>Cloudbeds:</strong> room availability, reservations, and direct bookings.</li>
+        <li><strong>Stripe:</strong> payment processing for wellness and retreat packages. Card details are entered directly with Stripe; we do not store full card numbers on our servers.</li>
+        <li><strong>Messaging platforms:</strong> LINE, WhatsApp, Instagram, and Facebook, when you choose to contact us through them.</li>
+      </ul>
+
+      <h3>4. Cookies</h3>
+      <p>Our website uses a small number of cookies that are necessary for the site to work and, where applicable, to measure how the site is used so we can improve it. You can disable cookies in your browser settings; some features may stop working if you do.</p>
+
+      <h3>5. Data retention</h3>
+      <p>We keep your personal information only for as long as we need it for the purposes described above, or as required by law (for example, guest records and financial records under Thai regulations). When data is no longer needed, we securely delete or anonymise it.</p>
+
+      <h3>6. Your rights</h3>
+      <p>Under Thailand's Personal Data Protection Act (PDPA) and similar laws, you have the right to:</p>
+      <ul>
+        <li>Access the personal information we hold about you.</li>
+        <li>Ask us to correct information that is incomplete or inaccurate.</li>
+        <li>Ask us to delete your personal information, where there is no legal reason to keep it.</li>
+        <li>Object to or restrict certain uses of your information.</li>
+        <li>Withdraw consent at any time, where we rely on consent.</li>
+        <li>Lodge a complaint with the relevant data protection authority.</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us using the details below.</p>
+
+      <h3>7. Security</h3>
+      <p>We take reasonable technical and organisational measures to protect your personal information against loss, misuse, and unauthorised access. No method of transmission over the internet is completely secure, but we work to use trusted providers and current best-practice safeguards.</p>
+
+      <h3>8. Children</h3>
+      <p>Our website is not aimed at children, and we do not knowingly collect personal information from anyone under 16 without parental or guardian consent. If you believe a child has provided us with information, please contact us so we can remove it.</p>
+
+      <h3>9. Changes to this policy</h3>
+      <p>We may update this policy from time to time. The “Last updated” date at the top shows when it was last revised. Significant changes will be highlighted on our website or communicated to you directly where appropriate.</p>
+
+      <h3>10. Contact us</h3>
+      <p>Questions about this policy or how we handle your personal information? Please contact us:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:hello@reehotel.com">hello@reehotel.com</a></li>
+        <li><strong>Address:</strong> <span data-address>Ree Hotel, Thonburi, Bangkok, Thailand</span></li>
+      </ul>
+    </div>
+  </div>
+</dialog>
+
+<!-- Gallery lightbox -->
+<dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+  <div class="lb">
+    <button class="x" data-close aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button class="nav-btn prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <figure style="margin:0"><img id="lbImg" alt=""><p id="lbCap"></p></figure>
+    <button class="nav-btn next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</dialog>
+
+<script>
+/* ===================== SETTINGS ===================== */
+const CONFIG = {
+  // Booking link (THB, no expired dates). Replace with the OneHotel booking engine URL later.
+  BOOKING_URL: "https://us2.cloudbeds.com/en/reservation/BKzPB4?currency=thb",
+  // Hotel GA4 Measurement ID, e.g. "G-AB12CD34EF". Empty = no tracking.
+  GA_ID: "",
+  // Exact hotel address or "latitude,longitude" for the map. Confirm with the hotel.
+  HOTEL_MAP: "Ree Hotel, Thonburi, Bangkok",
+  EMAIL: "hello@reehotel.com",
+  PHONE: "+66 95 739 4148",
+  // Optional Instagram reels on the Massage page. Left empty because the massage reel shows a person (PDPA).
+  // Add reel IDs only for videos with no people, e.g. ["DasKDc5PNCw"].
+  REELS: [],
+  // Five-star guest reviews for the moving showcase on Home. Add more as { text, who, from, stars }.
+  // Show only a first initial and country, never full names (PDPA).
+  REVIEWS: [
+    { text: "Best local Thai neighbourhood experience!", who: "R., United Kingdom", from: "Booking.com", stars: 5 },
+    { text: "Great hotel for family with kids.", who: "Family traveller", from: "Tripadvisor", stars: 5 },
+    { text: "Clean and magnificent room, I love it, thank you.", who: "Guest, France", from: "Trip.com", stars: 5 },
+    { text: "Really enjoyed it!", who: "J., guest", from: "Verified stay", stars: 5 }
+  ],
+  RATINGS: [
+    { score: "9.2", label: "Wonderful", from: "Booking.com" },
+    { score: "5.0", label: "Excellent", from: "Tripadvisor" },
+    { score: "9.8", label: "Staff rating", from: "Booking.com" }
+  ],
+  FACEBOOK: "https://www.facebook.com/share/1DQpo5tnw2/?mibextid=wwXIfr",
+  INSTAGRAM: "https://www.instagram.com/reehotels",
+  INSTAGRAM_DM: "https://ig.me/m/reehotels",
+  TIKTOK: "https://www.tiktok.com/@reehotel5",
+  // Footer address. Replace with the full street address.
+  ADDRESS: "Thonburi, Bangkok, Thailand",
+  // Footer credit on the right. Set to "" to remove.
+  CREDIT: 'Developed by <b>Maha-Hub</b>',
+  // Colour theme: "river" (indigo), "teal" (teal and sand), "teak" (warm wood), "lotus" (dusty plum), "forest" (original green).
+  // For a quick preview add ?theme=teak to the address.
+  THEME: "river",
+
+  // ===== Sister hotel (pre-opening). Fill in when the details are ready. =====
+  SISTER: {
+    ENABLED: true,                 // false hides every mention of the new hotel
+    NAME: "",                      // e.g. "Ree Riverside"; empty shows "our new hotel"
+    AREA: "Bangkok",               // short location for the menu
+    OPENING_DATE: "",              // e.g. "2027-01-15" shows a live countdown; empty shows "Opening soon"
+    OPENING_TEXT: "",              // optional, e.g. "Opening January 2027"
+    STORY: "",                     // optional short description of the new hotel
+    OFFER: "",                     // optional, e.g. "Ree guests get 15% off their first stay"
+    IMAGE: "",                     // optional photo or 3D rendering URL for the round picture
+    WEBSITE: ""                    // the new hotel's website once it exists
+  }
+};
+(function(){
+  const q = new URLSearchParams(location.search).get('theme');
+  document.documentElement.dataset.theme = ['river','teal','teak','lotus','forest'].includes(q) ? q : CONFIG.THEME;
+})();
+/* ==================================================== */
+
+const IMG = n => "https://ree-riverside.com/images/" + n;
+const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg>';
+const ICONS = {
+  boat:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 15h18l-2.5 4h-13z"/><path d="M6 15V9h12v6M9 9V6h6v3"/><path d="M2 21c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1"/></svg>',
+  temple:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2l1.5 4h-3zM9 6h6l1.5 4h-9zM6 10h12l1.5 4h-15z"/><path d="M5 14v7h14v-7M10 21v-4h4v4"/></svg>',
+  market:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9l2-5h14l2 5"/><path d="M3 9c0 1.5 1.3 2.5 3 2.5S9 10.5 9 9c0 1.5 1.3 2.5 3 2.5S15 10.5 15 9c0 1.5 1.3 2.5 3 2.5S21 10.5 21 9"/><path d="M5 11.5V20h14v-8.5M10 20v-5h4v5"/></svg>',
+  elephant:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 18v-6a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2c0 2-1 3-2 3s-1.5-1-1.5-2"/><path d="M8 18v-3M16 18v-3M12 18v-3"/><path d="M9 6c-2 0-3 1.5-3 3.5"/><circle cx="16" cy="10" r=".6" fill="currentColor"/></svg>',
+  car:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 16v-3l2-5h12l2 5v3z"/><circle cx="7.5" cy="16.5" r="1.6"/><circle cx="16.5" cy="16.5" r="1.6"/><path d="M6 12h12"/></svg>',
+  safari:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 3v18M12 7c-3 0-5-1.5-6-3M12 7c3 0 5-1.5 6-3M12 12c-4 0-6.5-1.5-8-4M12 12c4 0 6.5-1.5 8-4"/><path d="M5 21h14"/></svg>',
+  home:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 11l8-6 8 6v9H4z"/><path d="M10 20v-5h4v5"/></svg>',
+  train:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="3" width="12" height="13" rx="3"/><path d="M6 10h12M9 20l-2 2M15 20l2 2M9 13h.01M15 13h.01"/></svg>',
+  shop:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>',
+  hospital:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M12 8v8M8 12h8"/></svg>',
+  fb:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3c-2.8 0-4 1.8-4 4.5V11H7v4h3v7h4v-7h3l1-4h-4V8.8c0-.5.3-.8 1-.8z"/></svg>',
+  ig:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor"/></svg>',
+  tt:'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.4 2.2 1.9 3.8 4 4v3.2c-1.5 0-2.9-.4-4-1.2V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.3a2.8 2.8 0 1 0 1.8 2.6V3z"/></svg>',
+  mail:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>'
+};
+
+/* ---------- Tours ---------- */
+const TOURS = [
+  { id:'boat', icon:'boat', kind:'Half-day city tour', name:'Temples by river boat', len:'About 6 hours',
+    short:'Glide along the Chao Phraya River and visit its famous temples with a guide.',
+    desc:'The river is the most beautiful way to see old Bangkok. You travel by boat along the Chao Phraya and stop at its famous riverside temples, with a guide sharing the stories behind them.',
+    stops:[['Chao Phraya River by boat','Riverside palaces, temples and everyday canal life'],['Famous temples with a guide','Riverside temples such as Wat Arun, chosen with your guide']] },
+  { id:'car-half', icon:'temple', kind:'Half-day city tour', name:'Golden temples by car', len:'About 6 hours',
+    short:'Golden Buddha Temple, Mini Reclining Buddha Temple and a Gems Gallery tour.',
+    desc:'A comfortable, air-conditioned way to see some of the city\u2019s most loved Buddha images, finishing with a visit to a gems gallery.',
+    stops:[['Golden Buddha Temple','Home of a celebrated solid-gold Buddha image'],['Mini Reclining Buddha Temple','A peaceful temple with a reclining Buddha'],['Gems Gallery tour','See how Thai gems and jewelry are crafted']] },
+  { id:'markets', icon:'market', kind:'Half-day city tour', name:'Floating Market and Railway Market', len:'About 6 hours',
+    short:'Two of Thailand\u2019s most famous markets, on the water and on the train tracks.',
+    desc:'Shop and snack from boats at a traditional floating market, then watch the train roll slowly through the stalls of the famous railway market.',
+    stops:[['Floating Market','Fruit, snacks and souvenirs sold from wooden boats'],['Railway Market','Vendors fold back their stalls as the train passes through']] },
+  { id:'elephant', icon:'elephant', kind:'Half-day tour', name:'Elephant Sanctuary', len:'Half day',
+    short:'A gentle day spent meeting elephants in a sanctuary setting.',
+    desc:'Spend time with elephants in a sanctuary setting. Message us and we\u2019ll share the sanctuary options, travel time and what to bring.',
+    stops:[['Elephant Sanctuary','Observe and learn about elephants in their care']] },
+  { id:'full-car', icon:'car', kind:'Full-day tour', name:'Bangkok highlights with private driver', len:'Full day',
+    short:'Grand Palace, Wat Pho, photo spots, Wat Pak Nam and an Asiatique dinner cruise.',
+    desc:'A full day with your own car and driver, from Bangkok\u2019s grandest landmarks to its favorite photo spots, ending with a two-hour dinner cruise.',
+    stops:[['Grand Palace','The former royal residence and its glittering halls'],['Wat Pho','The temple of the great Reclining Buddha'],['After the Rain Café','A popular photo spot'],['Bubble in the Forest','A popular photo spot'],['Wat Pak Nam','A sacred temple known for its striking interiors'],['Asiatique dinner cruise','Two hours on the river at night']] },
+  { id:'safari', icon:'safari', kind:'Full-day tour', name:'Safari World', len:'Full day',
+    short:'Safari Park and Marine Park, with pick-up and drop-off from the hotel.',
+    desc:'A fun family day out. Drive through the Safari Park, then enjoy the shows and animals of the Marine Park. We arrange your transport both ways.',
+    stops:[['Safari Park','Drive-through wildlife park'],['Marine Park','Animal shows and exhibits'],['Hotel transfers','Pick-up and drop-off from Ree Hotel']] }
+];
+
+/* ---------- Location ---------- */
+const PLACES = [
+  { name:'Ree Hotel', type:'Our home in Thonburi', dist:'Here', icon:'home', q:()=>CONFIG.HOTEL_MAP,
+    info:'In the heart of Thonburi, old Bangkok, surrounded by quiet canals and everyday local life.' },
+  { name:'Siam Charoennakhon Pier', type:'Nearest boat station', dist:'600 m', icon:'boat', q:()=>'Siam Charoennakhon Pier, Bangkok',
+    info:'A 14-minute walk. River boats from here reach Wat Arun, Wat Pho, the Grand Palace, Icon Siam, Chinatown, Asiatique and Khao San Road.' },
+  { name:'BTS Wongwian Yai', type:'Sky train, exit 2', dist:'1.2 km', icon:'train', q:()=>'BTS Wongwian Yai, Bangkok',
+    info:'Connects to the Sukhumvit and Silom lines for downtown Bangkok, shopping and entertainment.' },
+  { name:'7-Eleven and local market', type:'Daily needs', dist:'150 m', icon:'shop', q:()=>CONFIG.HOTEL_MAP,
+    info:'Snacks, essentials and local street food, a short walk from the door.' },
+  { name:'Pinklao Navy Hospital', type:'Hospital', dist:'300 m', icon:'hospital', q:()=>'Somdech Phra Pinklao Hospital, Bangkok',
+    info:'A major hospital close to the hotel.' },
+  { name:'Samitivej Hospital', type:'Hospital', dist:'300 m', icon:'hospital', q:()=>'Samitivej Thonburi Hospital, Bangkok',
+    info:'An international private hospital close to the hotel.' }
+];
+
+/* ---------- Gallery ---------- */
+const PHOTOS = [
+  ['rooms','room-deluxe-family.jpeg','Deluxe Family Room','4/5'],['hotel','lobby-warm.jpeg','Lobby in warm evening light','1/1'],
+  ['wellness','sound-healing-room.jpeg','Sound healing room with Tibetan singing bowls','4/5'],['rooms','room-balcony.jpeg','Deluxe Balcony Room','3/4'],
+  ['rooms','room-balcony-2.jpeg','Deluxe Balcony Room view','1/1'],['hotel','reception.jpeg','Reception','4/5'],
+  ['wellness','wellness-healing-collage.jpeg','Sound bath, Reiki and healthy food','1/1'],['rooms','room-dormitory.jpeg','Mixed Gender Dormitory','4/5'],
+  ['rooms','room-deluxe.jpeg','Deluxe Room','3/4'],['hotel','lobby-night.jpeg','Lobby at night','1/1'],
+  ['rooms','room-cozy.jpeg','Cozy Room','4/5'],['wellness','wellness-rooms-collage.jpeg','Comfort room, breakfast and wellness','1/1'],
+  ['rooms','room-stone.jpeg','Stone-feature Room','3/4'],['hotel','reception-welcome.jpeg','Reception welcome area','4/5'],
+  ['rooms','room-garden.jpeg','Garden Room','1/1'],['hotel','heroimage.jpeg','Room and neighborhood','4/5'],
+  ['hotel','lobby-cafe.jpeg','Lobby café area','3/4']
+];
+
+(function(){
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+
+  /* Links from settings */
+  $$('[data-book]').forEach(a => { a.href = CONFIG.BOOKING_URL; a.target = '_blank'; a.rel = 'noopener'; });
+  const soc = { facebook:CONFIG.FACEBOOK, instagram:CONFIG.INSTAGRAM, tiktok:CONFIG.TIKTOK };
+  $$('[data-social]').forEach(a => a.href = soc[a.dataset.social]);
+
+  /* Tours */
+  $('#tourGrid').innerHTML = TOURS.map((t,i) => `
+    <button class="card tour" data-tour="${t.id}" data-reveal="up" style="--d:${(i%3)*.12}s">
+      <span class="ico">${ICONS[t.icon]}</span>
+      <span style="font-size:.85rem;color:var(--gold-ink);font-family:var(--display)">${t.kind}</span>
+      <h3 style="margin-top:.3rem">${t.name}</h3>
+      <span class="len">${t.len}</span>
+      <p>${t.short}</p>
+      <span class="more">See details ${arrow}</span>
+    </button>`).join('');
+  const td = $('#tourDialog');
+  $$('[data-tour]').forEach(b => b.addEventListener('click', () => {
+    const t = TOURS.find(x => x.id === b.dataset.tour);
+    $('#tdKind').textContent = t.kind;
+    $('#tdTitle').textContent = t.name;
+    $('#tdLen').textContent = t.len;
+    $('#tdDesc').textContent = t.desc;
+    $('#tdStops').innerHTML = t.stops.map(s => `<li><strong>${s[0]}</strong><span>${s[1]}</span></li>`).join('');
+    const msg = encodeURIComponent(`Hello Ree Hotel, I'd like to book the "${t.name}" tour. My preferred date is: `);
+    $('#tdAsk').innerHTML = `
+      <a href="${CONFIG.FACEBOOK}" target="_blank" rel="noopener" data-tourlink="facebook">${ICONS.fb} Message on Facebook</a>
+      <a href="${CONFIG.INSTAGRAM_DM}" target="_blank" rel="noopener" data-tourlink="instagram">${ICONS.ig} Message on Instagram</a>
+      <a href="${CONFIG.TIKTOK}" target="_blank" rel="noopener" data-tourlink="tiktok">${ICONS.tt} Visit our TikTok</a>
+      <a href="mailto:${CONFIG.EMAIL}?subject=${encodeURIComponent('Tour booking: ' + t.name)}&body=${msg}" data-tourlink="email">${ICONS.mail} Email the team</a>`;
+    td.showModal();
+    track('tour_view', { tour: t.name });
+  }));
+
+  /* Dialog closing */
+  $$('dialog').forEach(d => {
+    d.addEventListener('click', e => { if (e.target === d || e.target.closest('[data-close]') || e.target.classList.contains('lb')) d.close(); });
+  });
+
+  /* Location */
+  const placesEl = $('#places'), map = $('#map'), tag = $('#maptag');
+  placesEl.innerHTML = PLACES.map((p,i) => `
+    <button class="place" data-i="${i}" data-reveal="up" style="--d:${i*.07}s" aria-pressed="false">
+      <span class="pi">${ICONS[p.icon]}</span>
+      <span><strong>${p.name}</strong><small>${p.type}</small></span>
+      <span class="dist">${p.dist}</span>
+      <span class="extra"><div><p>${p.info}</p><a href="#" data-dir target="_blank" rel="noopener">Get directions in Google Maps</a></div></span>
+    </button>`).join('');
+  const embed = q => `https://maps.google.com/maps?q=${encodeURIComponent(q)}&z=15&output=embed`;
+  function setPlace(i, animate){
+    const p = PLACES[i];
+    $$('.place').forEach((el, k) => {
+      const on = k === i;
+      el.classList.toggle('active', on);
+      el.setAttribute('aria-pressed', on);
+      if (on && animate && !reduce){ el.classList.remove('flip'); void el.offsetWidth; el.classList.add('flip'); }
+      const dir = el.querySelector('[data-dir]');
+      dir.href = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(CONFIG.HOTEL_MAP)}&destination=${encodeURIComponent(PLACES[k].q())}`;
+    });
+    placesEl.classList.add('has-active');
+    tag.textContent = p.name;
+    const src = embed(p.q());
+    if (!animate || !map.src){ map.src = src; return; }
+    if (map.src === src) return;
+    map.classList.add('leaving');
+    setTimeout(() => {
+      map.src = src; map.classList.remove('leaving'); map.classList.add('entering');
+      map.onload = () => requestAnimationFrame(() => map.classList.remove('entering'));
+      setTimeout(() => map.classList.remove('entering'), 1500);
+    }, reduce ? 0 : 450);
+  }
+  placesEl.addEventListener('click', e => {
+    if (e.target.closest('[data-dir]')) return;
+    const b = e.target.closest('.place'); if (!b) return;
+    setPlace(+b.dataset.i, true);
+    if (matchMedia('(max-width:820px)').matches) setTimeout(() => document.querySelector('.mapbox').scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block:'center' }), 700);
+  });
+  setPlace(0, false);
+
+  /* Gallery */
+  const mas = $('#masonry');
+  mas.innerHTML = PHOTOS.map((p,i) => `
+    <button class="shot" data-cat="${p[0]}" data-i="${i}" style="--ar:${p[3]}" data-reveal="up">
+      <div class="frame"><img loading="lazy" src="${IMG(p[1])}" alt="${p[2]}"></div>
+      <figcaption>${p[2]}</figcaption>
+    </button>`).join('');
+  $$('.tabs button').forEach(b => b.addEventListener('click', () => {
+    $$('.tabs button').forEach(x => x.setAttribute('aria-pressed', x === b));
+    $$('.shot').forEach(s => s.classList.toggle('hide', !(b.dataset.filter === 'all' || s.dataset.cat === b.dataset.filter)));
+  }));
+  const lb = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCap');
+  let li = 0;
+  const visible = () => $$('.shot:not(.hide)').map(s => +s.dataset.i);
+  function show(i, swap){
+    li = i;
+    const set = () => { lbImg.src = IMG(PHOTOS[i][1]); lbImg.alt = PHOTOS[i][2]; lbCap.textContent = PHOTOS[i][2]; lbImg.classList.remove('swap'); };
+    if (swap && !reduce){ lbImg.classList.add('swap'); setTimeout(set, 350); } else set();
+  }
+  mas.addEventListener('click', e => { const s = e.target.closest('.shot'); if (!s) return; show(+s.dataset.i); lb.showModal(); });
+  function step(d){ const v = visible(); const k = v.indexOf(li); show(v[(k + d + v.length) % v.length], true); }
+  lb.querySelector('.prev').addEventListener('click', e => { e.stopPropagation(); step(-1); });
+  lb.querySelector('.next').addEventListener('click', e => { e.stopPropagation(); step(1); });
+  lb.addEventListener('keydown', e => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+
+  /* Missing photo fallback */
+  document.addEventListener('error', e => {
+    const img = e.target;
+    if (img.tagName === 'IMG' && img.closest('.frame')){ img.closest('.frame').classList.add('missing'); img.style.opacity = 0; }
+  }, true);
+
+  /* Header + menu */
+  const bar = $('#bar'), toggle = $('.menu-toggle'), drawer = $('#drawer');
+  const FP = document.documentElement.classList.contains('fp');
+  let cur = 0;
+  const homeEl = $('#home');
+  const onScroll = () => bar.classList.toggle('solid', (FP ? (cur !== 0 || homeEl.scrollTop > innerHeight * .55) : scrollY > innerHeight * .6) && !document.body.classList.contains('menu-open'));
+  homeEl.addEventListener('scroll', onScroll, { passive:true });
+  addEventListener('scroll', onScroll, { passive:true }); onScroll();
+  toggle.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    document.body.classList.toggle('menu-open', open);
+    toggle.setAttribute('aria-expanded', open); onScroll();
+  });
+  drawer.addEventListener('click', e => { if (e.target.closest('a')){ drawer.classList.remove('open'); document.body.classList.remove('menu-open'); toggle.setAttribute('aria-expanded', false); onScroll(); } });
+
+  /* Active nav link */
+  const links = $$('.nav a');
+  const spy = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + en.target.id));
+  }), { rootMargin:'-45% 0px -50% 0px' });
+  if (!FP) $$('main section[id]').forEach(s => spy.observe(s));
+
+  /* Reveal on scroll */
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+  }), { threshold:.12, rootMargin:'0px 0px -6% 0px' });
+
+
+  /* Parallax */
+  const par = $$('[data-parallax]');
+  if (!reduce){
+    let ticking = false;
+    const run = () => {
+      par.forEach(el => {
+        const r = el.parentElement.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > innerHeight) return;
+        el.style.translate = `0 ${(-r.top) * +el.dataset.parallax}px`;
+      });
+      ticking = false;
+    };
+    addEventListener('scroll', () => { if (!ticking){ ticking = true; requestAnimationFrame(run); } }, { passive:true });
+  }
+
+  /* Soft cursor that grows over anything clickable */
+  const ring = $('.cursor');
+  if (matchMedia('(hover:hover) and (pointer:fine)').matches && !reduce){
+    let x = 0, y = 0, cx = 0, cy = 0;
+    addEventListener('mousemove', e => { x = e.clientX; y = e.clientY; ring.classList.add('show'); });
+    document.addEventListener('mouseleave', () => ring.classList.remove('show'));
+    document.addEventListener('mouseover', e => ring.classList.toggle('big', !!e.target.closest('a,button,.card,.place,.shot')));
+    (function loop(){ cx += (x - cx) * .18; cy += (y - cy) * .18; ring.style.transform = `translate(${cx}px,${cy}px)`; requestAnimationFrame(loop); })();
+  }
+
+  /* Analytics (optional) */
+  function track(name, params){ if (window.gtag) gtag('event', name, params || {}); }
+  if (/^G-[A-Z0-9]{6,12}$/.test(CONFIG.GA_ID)){
+    const s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + CONFIG.GA_ID; document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function(){ dataLayer.push(arguments); };
+    gtag('js', new Date()); gtag('config', CONFIG.GA_ID);
+  }
+  document.addEventListener('click', e => {
+    const a = e.target.closest('a[href]'); if (!a) return;
+    if (a.matches('[data-book]')) track('book_click');
+    else if (a.href.includes('buy.stripe.com')) track('package_click', { label:a.textContent.trim() });
+    else if (a.dataset.tourlink) track('tour_contact', { channel:a.dataset.tourlink, tour:$('#tdTitle').textContent });
+  });
+
+  /* ===== Footer at the end of every page ===== */
+  const FOOT = `
+  <footer class="site-foot">
+    <div class="wrap sf-top">
+      <div class="sf-brand">
+        <a class="sf-logo" href="#home" aria-label="Ree Hotel, back to Home"><img src="https://ree-riverside.com/images/logo.png" alt="Ree Hotel" onerror="this.parentNode.classList.add('no-logo');this.remove()"><strong>Ree <span>Hotel</span></strong></a>
+        <p>A calm space in a living city. Simple, comfortable stays with gentle wellness in the heart of Thonburi, old Bangkok.</p>
+        <div class="sf-social">
+          <a href="${CONFIG.FACEBOOK}" target="_blank" rel="noopener" aria-label="Facebook">${ICONS.fb}</a>
+          <a href="${CONFIG.INSTAGRAM}" target="_blank" rel="noopener" aria-label="Instagram">${ICONS.ig}</a>
+          <a href="${CONFIG.TIKTOK}" target="_blank" rel="noopener" aria-label="TikTok">${ICONS.tt}</a>
+        </div>
+      </div>
+      <nav class="sf-col" aria-label="Stay">
+        <h4>Stay</h4>
+        <a href="#rooms">Rooms</a><a href="#packages">Wellness packages</a><a href="#massage">Wellness massage</a><a href="#healing">Private healing</a><a data-book href="${CONFIG.BOOKING_URL}" target="_blank" rel="noopener">Book your stay</a>
+      </nav>
+      <nav class="sf-col" aria-label="Our hotels">
+        <h4>Our hotels</h4>
+        <a href="#home">Ree Hotel, Thonburi</a>
+        <a href="#" data-sister-link class="sis"><span data-sister-name>Our new hotel</span> <em style="font-style:normal;font-size:.75rem;color:var(--champagne)">(opening soon)</em></a>
+      </nav>
+      <nav class="sf-col" aria-label="Explore">
+        <h4>Explore</h4>
+        <a href="#home">Home</a><a href="#tours">Tours</a><a href="#location">Location</a><a href="#gallery">Gallery</a>
+      </nav>
+      <div class="sf-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><a href="tel:${CONFIG.PHONE.replace(/\s/g,'')}">${CONFIG.PHONE}</a></li>
+          <li>${ICONS.mail}<a href="mailto:${CONFIG.EMAIL}">${CONFIG.EMAIL}</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h16v11H9l-5 4z"/></svg><a href="#contact">Chat with us on LINE or WhatsApp</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span>${CONFIG.ADDRESS}</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sf-bottom"><div class="wrap">
+      <span>© ${new Date().getFullYear()} Ree Hotel. All rights reserved. <button type="button" class="linklike" data-privacy style="margin-left:1rem">Privacy policy</button></span>
+      ${CONFIG.CREDIT ? `<span>${CONFIG.CREDIT}</span>` : ''}
+    </div></div>
+  </footer>`;
+  const footTargets = FP ? $$('main > section:not(.hero)') : [$('#contact')];
+  footTargets.forEach(sec => sec.insertAdjacentHTML('beforeend', FOOT));
+  $$('.site-foot [data-book]').forEach(a => a.href = CONFIG.BOOKING_URL);
+
+  /* ===== Hero slideshow (Marni-style) ===== */
+  const SLIDE_TIME = 6500;
+  const LINES = ['Slow down in a real Bangkok neighborhood','Meditation, sound healing and yoga, woven into your stay','Canals, temples and the river, a short walk away'];
+  const slides = $$('.slide'), tabs = $$('.slide-tabs button'), tagEl = $('#tagline');
+  let si = 0, timer = null;
+  document.documentElement.style.setProperty('--slide-time', SLIDE_TIME + 'ms');
+  function showSlide(i){
+    if (i === si) return;
+    slides[si].classList.remove('on'); slides[i].classList.add('on');
+    tabs.forEach((t,k) => t.setAttribute('aria-selected', k === i));
+    tagEl.classList.add('out');
+    setTimeout(() => { tagEl.textContent = LINES[i]; tagEl.classList.remove('out'); }, reduce ? 0 : 450);
+    si = i;
+  }
+  function autoplay(){ clearInterval(timer); if (!reduce) timer = setInterval(() => showSlide((si + 1) % slides.length), SLIDE_TIME); }
+  tabs.forEach((t,k) => t.addEventListener('click', () => {
+    tabs.forEach(x => { const bar = x.querySelector('i'); bar.style.display='none'; void bar.offsetWidth; bar.style.display=''; });
+    showSlide(k); autoplay();
+  }));
+  if (reduce) $('.slide-tabs').classList.add('paused');
+  autoplay();
+  $$('[data-address]').forEach(el => el.textContent = CONFIG.ADDRESS);
+
+  /* ===== Wellness massage ===== */
+  const telHref = 'tel:' + CONFIG.PHONE.replace(/\s/g, '');
+  $$('[data-phone]').forEach(a => { a.href = telHref; a.textContent = CONFIG.PHONE; });
+  const reelBox = $('#reels');
+  (CONFIG.REELS || []).forEach((id, i) => {
+    reelBox.insertAdjacentHTML('beforeend', `
+      <div class="reel" data-reveal="up" style="--d:${.15 + i * .12}s">
+        <iframe src="https://www.instagram.com/reel/${id}/embed/" title="Ree Hotel on Instagram" loading="lazy" allowtransparency="true" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://www.instagram.com/reel/${id}/" target="_blank" rel="noopener">Watch on Instagram</a>
+      </div>`);
+  });
+  const mDlg = $('#massageDlg');
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-treat]'); if (!t) return;
+    const name = t.dataset.treat, price = t.dataset.price;
+    $('#mTitle').textContent = name;
+    $('#mPrice').textContent = price ? `${price} THB, 60 minutes` : 'From 450 THB, 60 minutes';
+    const body = encodeURIComponent(`Hello Ree Hotel, I'd like to book: ${name}${price ? ' (' + price + ' THB, 60 min)' : ''}. My preferred day and time: `);
+    $('#mAsk').innerHTML = `
+      <a href="${telHref}" data-tourlink="massage-call"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg> Call ${CONFIG.PHONE}</a>
+      <a href="${CONFIG.INSTAGRAM_DM}" target="_blank" rel="noopener" data-tourlink="massage-instagram">${ICONS.ig} Message on Instagram</a>
+      <a href="${CONFIG.FACEBOOK}" target="_blank" rel="noopener" data-tourlink="massage-facebook">${ICONS.fb} Message on Facebook</a>
+      <a href="mailto:${CONFIG.EMAIL}?subject=${encodeURIComponent('Massage booking: ' + name)}&body=${body}" data-tourlink="massage-email">${ICONS.mail} Email us</a>`;
+    mDlg.showModal();
+    track('massage_view', { treatment: name });
+  });
+
+  /* ===== Five-star reviews marquee ===== */
+  const star = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>';
+  const five = (CONFIG.REVIEWS || []).filter(r => (r.stars || 5) >= 5);
+  const card = r => `<article class="review"><div class="stars" aria-label="5 out of 5 stars">${star.repeat(5)}</div><q>${r.text}</q><footer><span>${r.who}</span><em>${r.from}</em></footer></article>`;
+  const fill = (el, list) => {
+    if (!list.length) return;
+    let row = list; while (row.length < 6) row = row.concat(list);       // enough cards to fill wide screens
+    el.querySelector('.m-track').innerHTML = row.map(card).join('') + row.map(card).join('');
+    el.style.setProperty('--dur', (row.length * 7) + 's');
+    el.querySelectorAll('.m-track > article:nth-child(n+' + (row.length + 1) + ')').forEach(a => a.setAttribute('aria-hidden', 'true'));
+  };
+  fill($('#mq1'), five);
+  fill($('#mq2'), five.slice().reverse().slice(1).concat(five.slice(-1)));
+  $('#ratings').innerHTML = (CONFIG.RATINGS || []).map(r => `<div class="rating"><b>${r.score}</b><span><strong>${r.label}</strong>${r.from}</span></div>`).join('');
+  if (!five.length) $('.reviews-block').hidden = true;
+
+  /* ===== Sister hotel (pre-opening) ===== */
+  const SIS = CONFIG.SISTER || {};
+  if (!SIS.ENABLED) document.documentElement.classList.add('sis-off');
+  else {
+    const name = SIS.NAME || 'our new hotel';
+    const Cap = n => n.charAt(0).toUpperCase() + n.slice(1);
+    $$('[data-sister-name]').forEach(el => el.textContent = el.closest('.hotels-menu,.sf-col') ? Cap(name) : name);
+    $$('[data-sister-area]').forEach(el => el.textContent = SIS.AREA || '');
+    $$('[data-sister-mono]').forEach(el => el.textContent = SIS.NAME ? SIS.NAME.split(' ').map(w => w[0]).join('').slice(0,3) : 'Ree');
+    if (SIS.STORY) $('[data-sister-story]').textContent = SIS.STORY;
+    if (!SIS.NAME) $('#sisTitle').textContent = 'A new home from the Ree family is on its way';
+    $$('[data-sister-banner]').forEach(el => el.textContent = (SIS.NAME ? SIS.NAME : 'Our new sister hotel') + ' is on its way. ' + (SIS.OFFER ? SIS.OFFER + '.' : 'Be the first to know.'));
+    const when = $('[data-sister-when]');
+    const date = SIS.OPENING_DATE ? new Date(SIS.OPENING_DATE + 'T00:00:00+07:00') : null;
+    if (SIS.OPENING_TEXT) when.textContent = SIS.OPENING_TEXT;
+    else if (date && !isNaN(date)) when.textContent = 'Opening ' + date.toLocaleDateString('en-GB', { day:'numeric', month:'long', year:'numeric', timeZone:'Asia/Bangkok' });
+    if (SIS.OFFER){ $('[data-sister-offer]').innerHTML = '<strong>Pre-opening offer:</strong> ' + SIS.OFFER; $('.offer').hidden = false; }
+    if (SIS.IMAGE){ $('.mono').insertAdjacentHTML('afterend', `<div class="frame"><img src="${SIS.IMAGE}" alt="${name}"></div>`); }
+    if (SIS.WEBSITE){ const a = $('[data-sister-site]'); a.href = SIS.WEBSITE; a.hidden = false; }
+    // Every "new hotel" link: its website if there is one, otherwise the teaser on Home
+    $$('[data-sister-link]').forEach(a => {
+      if (SIS.WEBSITE){ a.href = SIS.WEBSITE; a.target = '_blank'; a.rel = 'noopener'; }
+      else a.setAttribute('href', '#sister');
+    });
+    // Countdown
+    if (date && !isNaN(date) && date > new Date()){
+      const cd = $('.countdown'); cd.hidden = false;
+      const pad = n => String(n).padStart(2, '0');
+      const tick = () => {
+        let t = Math.max(0, date - new Date()) / 1000;
+        const d = Math.floor(t / 86400); t -= d * 86400;
+        const h = Math.floor(t / 3600); t -= h * 3600;
+        const m = Math.floor(t / 60); const s = Math.floor(t - m * 60);
+        cd.querySelector('[data-cd="d"]').textContent = d;
+        cd.querySelector('[data-cd="h"]').textContent = pad(h);
+        cd.querySelector('[data-cd="m"]').textContent = pad(m);
+        cd.querySelector('[data-cd="s"]').textContent = pad(s);
+      };
+      tick(); setInterval(tick, 1000);
+    }
+    // Register interest popup
+    const intDlg = $('#interest');
+    const msg = encodeURIComponent(`Hello Ree Hotel, please let me know when ${SIS.NAME || 'your new hotel'} opens for bookings. My name is: `);
+    $('#intAsk').innerHTML = `
+      <a href="mailto:${CONFIG.EMAIL}?subject=${encodeURIComponent('Opening news: ' + (SIS.NAME || 'new hotel'))}&body=${msg}" data-tourlink="interest-email">${ICONS.mail} Email us</a>
+      <a href="${CONFIG.INSTAGRAM_DM}" target="_blank" rel="noopener" data-tourlink="interest-instagram">${ICONS.ig} Message on Instagram</a>
+      <a href="${CONFIG.FACEBOOK}" target="_blank" rel="noopener" data-tourlink="interest-facebook">${ICONS.fb} Message on Facebook</a>`;
+    document.addEventListener('click', e => { if (e.target.closest('[data-interest]')){ intDlg.showModal(); track('sister_interest_open'); } });
+    // Header dropdown
+    const hw = $('.hotels'), hb = $('.hotels-btn');
+    hb.addEventListener('click', e => { e.stopPropagation(); const o = hw.classList.toggle('open'); hb.setAttribute('aria-expanded', o); });
+    document.addEventListener('click', e => { if (!e.target.closest('.hotels')){ hw.classList.remove('open'); hb.setAttribute('aria-expanded', false); } });
+    hw.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hw.classList.remove('open'); hb.setAttribute('aria-expanded', false); }));
+  }
+
+  /* ===== Privacy policy popup ===== */
+  const pv = $('#privacy');
+  document.addEventListener('click', e => {
+    if (!e.target.closest('[data-privacy]')) return;
+    e.preventDefault();
+    pv.querySelector('.pv').scrollTop = 0;
+    pv.showModal();
+  });
+
+  /* ===== Page controller (one title = one page) ===== */
+  const pages = $$('main > section');
+  if (FP){
+    let busy = false;
+    const E = 'cubic-bezier(.76,0,.24,1)', D = reduce ? 300 : 1300;
+    const reveal = p => p.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+    const unreveal = p => p.querySelectorAll('[data-reveal]').forEach(el => { io.unobserve(el); el.classList.remove('in'); });
+    function update(){
+      const p = pages[cur];
+      links.forEach(l => l.classList.toggle('on', l.getAttribute('href') === '#' + p.id));
+      onScroll();
+    }
+    function go(i){
+      if (busy || i === cur || i < 0 || i >= pages.length) return;
+      busy = true;
+      const out = pages[cur], inn = pages[i], fwd = i > cur, kids = [...inn.children], outKids = [...out.children];
+      inn.scrollTop = 0; unreveal(inn); inn.classList.add('moving');
+      if (i === 0){ document.body.classList.remove('loaded'); void document.body.offsetWidth; }
+      const A = [];
+      if (reduce){
+        inn.style.zIndex = 3;
+        A.push(inn.animate([{opacity:0},{opacity:1}], {duration:D}));
+      } else if (fwd){
+        inn.style.zIndex = 3; out.style.zIndex = 2;
+        A.push(inn.animate([{clipPath:'inset(100% 0 0 0)'},{clipPath:'inset(0% 0 0 0)'}], {duration:D, easing:E}));
+        kids.forEach(k => A.push(k.animate([{transform:'translateY(16vh)'},{transform:'none'}], {duration:D, easing:E})));
+        A.push(out.animate([{transform:'none', filter:'brightness(1)'},{transform:'translateY(-12vh) scale(.95)', filter:'brightness(.45)'}], {duration:D, easing:E}));
+      } else {
+        out.style.zIndex = 3; inn.style.zIndex = 2;
+        A.push(out.animate([{clipPath:'inset(0% 0 0 0)'},{clipPath:'inset(100% 0 0 0)'}], {duration:D, easing:E}));
+        outKids.forEach(k => A.push(k.animate([{transform:'none'},{transform:'translateY(16vh)'}], {duration:D, easing:E})));
+        A.push(inn.animate([{transform:'translateY(-12vh) scale(.95)', filter:'brightness(.45)'},{transform:'none', filter:'brightness(1)'}], {duration:D, easing:E}));
+      }
+      setTimeout(() => { reveal(inn); if (i === 0) document.body.classList.add('loaded'); }, reduce ? 0 : D * .42);
+      cur = i; update();
+      Promise.all(A.map(a => a.finished)).then(() => {
+        out.classList.remove('cur'); inn.classList.add('cur'); inn.classList.remove('moving');
+        out.style.zIndex = ''; inn.style.zIndex = '';
+        unreveal(out); busy = false;
+        history.replaceState(null, '', '#' + inn.id);
+        const h = inn.querySelector('h1,h2'); if (h){ h.setAttribute('tabindex','-1'); h.focus({preventScroll:true}); }
+      });
+    }
+    document.addEventListener('click', e => {
+      if (e.target.closest('.scroll-cue')){ homeEl.scrollTo({ top: homeEl.querySelector('.hero').offsetHeight - 70, behavior: reduce ? 'auto' : 'smooth' }); return; }
+      const a = e.target.closest('a[href^="#"]'); if (!a || a.getAttribute('href') === '#') return;
+      const href = a.getAttribute('href');
+      const k = pages.findIndex(p => '#' + p.id === href);
+      if (k > -1){ e.preventDefault(); go(k); return; }
+      // a link to something inside a page (e.g. #sister): open that page, then glide to it
+      const target = document.getElementById(href.slice(1));
+      const page = target && target.closest('main > section');
+      if (page){
+        e.preventDefault();
+        const idx = pages.indexOf(page);
+        const glide = () => page.scrollTo({ top: target.offsetTop - 80, behavior: reduce ? 'auto' : 'smooth' });
+        if (idx === cur) glide(); else { go(idx); setTimeout(glide, D + 100); }
+      }
+    });
+    // start on the page in the address bar (e.g. #tours)
+    const start = Math.max(0, pages.findIndex(p => '#' + p.id === location.hash));
+    cur = start; pages[cur].classList.add('cur'); update();
+    setTimeout(() => reveal(pages[cur]), 300);
+  }
+
+  /* Start the hero motion */
+  requestAnimationFrame(() => setTimeout(() => document.body.classList.add('loaded'), 80));
+})();
+</script>
+</body>
+</html>
